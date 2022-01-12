@@ -1,1 +1,1 @@
-Welcome to Cooper.
+Welcome to Cooper. We are preparing Cooper's code and will release it.
