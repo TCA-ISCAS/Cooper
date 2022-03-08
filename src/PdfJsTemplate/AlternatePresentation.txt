@@ -1,0 +1,6 @@
+!begin lines
+<new boolean>=<AlternatePresentation>.active;
+<new JString>=<AlternatePresentation>.type;
+<AlternatePresentation>.start(); #could have two optional parameters
+<AlternatePresentation>.stop();
+!end lines

@@ -1,0 +1,322 @@
+#rawnotes:#    "Annotation\nalignment int 0 1 2\nr-attachment annotAttachment\nAP string Approved AsIs Confidential Departmental Draft Experimental Expired Final ForComment ForPublicRelease NotApproved NotForPublicRelease Sold TopSecret\narrowBegin string None OpenArrow ClosedArrow ROpenArrow RClosedArrow Butt Diamond Circle Square Slash\narrowEnd string None OpenArrow ClosedArrow ROpenArrow RClosedArrow Butt Diamond Circle Square Slash\nattachIcon string Paperclip PushPin Graph Tag\nauthor string\nborderEffectIntensity int\n-borderEffectStyle string C\ncallout callout_intarray\n-cAttachmentPath string\n-caretSymbol string P S\ncontents string\nr-creationDate Date\ndash dash_intarray\ndelay boolean\ndoCaption boolean\nfillColor color_array\ngestures annot_gestures\nhidden boolean\ninReplyTo string\nintent string FreeTextCallout PolygonCloud LineArrow LineDimension\nleaderExtend int\nleaderLength int\nlineEnding string None OpenArrow ClosedArrow ROpenArrow RClosedArrow Butt Diamond Circle Square Slash\nmodDate Date\nname string\nnoteIcon string Check Circle Comment Cross Help Insert Key NewParagraph Note Paragraph RightArrow RightPointer Star UpArrow UpLeftArrow\nnoView boolean\nopacity float\noverlayText string\npage page_idx\npoint point_array\npoints point_2\npopupOpen boolean\npopupRect annot_popup_rect\nprint boolean\nquads annot_quads\nrect annot_rect\nreadOnly boolean\nrefType string R Group\nrepeat boolean\nrichContents array-Span\nrichDefaults Span\nrotate int 0 90 180 270\nr-seqNum int\nsoundIcon string Speaker\nstate string Accepted Rejected Cancelled Completed None Marked Unmarked\nstateModel string Marked Review\nstrokeColor color_array\nstyle string S D\nsubject string\ntextFont font\n/font font.Times font.TimesB font.TimesI font.TimesBI font.Helv font.HelvB font.HelvI font.HelvBI font.Cour font.CourB font.CourI font.CourBI font.Symbol   font.ZapfD\ntextSize int_0_32767\ntoggleNoView boolean\nr-type string\nvertices array-oCoords\nwidth int\n\n\n\n\n\n\n\n"
+
+!begin lines
+<Annotation pointer>.alignment=<int_Annotation_alignment>;
+<new int>=<Annotation pointer>.alignment;
+
+<new int>=<Annotation pointer>.attachment;
+
+<Annotation pointer>.AP=<string_Annotation_AP>;
+<new JString>=<Annotation pointer>.AP;
+
+<Annotation pointer>.arrowBegin=<string_Annotation_arrowBegin>;
+<new JString>=<Annotation pointer>.arrowBegin;
+
+<Annotation pointer>.arrowEnd=<string_Annotation_arrowEnd>;
+<new JString>=<Annotation pointer>.arrowEnd;
+
+<Annotation pointer>.attachIcon=<string_Annotation_attachIcon>;
+<new JString>=<Annotation pointer>.attachIcon;
+
+<Annotation pointer>.author=<string>;
+<new JString>=<Annotation pointer>.author;
+
+if(<int id=1>%6<lt>1){<Annotation id=2 pointer>.borderEffectIntensity=<int>;}else if(<int id=1>%6<lt>4){<Annotation id=2 pointer>.borderEffectIntensity=<Annotation id=2 pointer>.borderEffectIntensity+(<int_attr_add>)}else{<Annotation id=2 pointer>.borderEffectIntensity=<Annotation id=2 pointer>.borderEffectIntensity*(<int_attr_mul>)}
+<new int>=<Annotation pointer>.borderEffectIntensity;
+
+# ****-borderEffectStyle string C****
+<Annotation pointer>.borderEffectStyle=<string_Annotation_borderEffectStyle>;
+<new JString>=<Annotation pointer>.borderEffectStyle;
+
+<Annotation pointer>.callout=<callout_intarray>;
+<new callout_intarray>=<Annotation pointer>.callout;
+
+# ****-cAttachmentPath string****
+<Annotation pointer>.cAttachmentPath=<string>;
+<new JString>=<Annotation pointer>.cAttachmentPath;
+
+# ****-caretSymbol string P S****
+<Annotation pointer>.caretSymbol=<string_Annotation_caretSymbol>;
+<new JString>=<Annotation pointer>.caretSymbol;
+
+<Annotation pointer>.contents=<string>;
+<new JString>=<Annotation pointer>.contents;
+
+<new Date>=<Annotation pointer>.creationDate;
+
+<Annotation pointer>.dash=<dash_intarray>;
+<new int>=<Annotation pointer>.dash;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.delay=<boolean>;}else{<Annotation id=2 pointer>.delay=!(<Annotation id=2 pointer>.delay)}
+<new boolean>=<Annotation pointer>.delay;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.doCaption=<boolean>;}else{<Annotation id=2 pointer>.doCaption=!(<Annotation id=2 pointer>.doCaption)}
+<new boolean>=<Annotation pointer>.doCaption;
+
+<Annotation pointer>.fillColor=<Color>;
+<new Color>=<Annotation pointer>.fillColor;
+
+<Annotation pointer>.gestures=<array elemtype=point>;
+<new array elemtype=int>=<Annotation pointer>.gestures;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.hidden=<boolean>;}else{<Annotation id=2 pointer>.hidden=!(<Annotation id=2 pointer>.hidden)}
+<new boolean>=<Annotation pointer>.hidden;
+
+<Annotation pointer>.inReplyTo=<annot_name>;
+<new JString>=<Annotation pointer>.inReplyTo;
+
+<Annotation pointer>.intent=<string_Annotation_intent>;
+<new JString>=<Annotation pointer>.intent;
+
+if(<int id=1>%6<lt>1){<Annotation id=2 pointer>.leaderExtend=<int>;}else if(<int id=1>%6<lt>4){<Annotation id=2 pointer>.leaderExtend=<Annotation id=2 pointer>.leaderExtend+(<int_attr_add>)}else{<Annotation id=2 pointer>.leaderExtend=<Annotation id=2 pointer>.leaderExtend*(<int_attr_mul>)}
+<new int>=<Annotation pointer>.leaderExtend;
+
+if(<int id=1>%6<lt>1){<Annotation id=2 pointer>.leaderLength=<int>;}else if(<int id=1>%6<lt>4){<Annotation id=2 pointer>.leaderLength=<Annotation id=2 pointer>.leaderLength+(<int_attr_add>)}else{<Annotation id=2 pointer>.leaderLength=<Annotation id=2 pointer>.leaderLength*(<int_attr_mul>)}
+<new int>=<Annotation pointer>.leaderLength;
+
+<Annotation pointer>.lineEnding=<string_Annotation_lineEnding>;
+<new JString>=<Annotation pointer>.lineEnding;
+
+<Annotation pointer>.modDate=<Date>;
+<new Date>=<Annotation pointer>.modDate;
+
+<Annotation pointer>.name=<string>;
+<new JString>=<Annotation pointer>.name;
+
+<Annotation pointer>.noteIcon=<string_Annotation_noteIcon>;
+<new JString>=<Annotation pointer>.noteIcon;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.noView=<boolean>;}else{<Annotation id=2 pointer>.noView=!(<Annotation id=2 pointer>.noView)}
+<new boolean>=<Annotation pointer>.noView;
+
+<Annotation pointer>.opacity=<float>;
+<new float>=<Annotation pointer>.opacity;
+
+<Annotation pointer>.overlayText=<string>;
+<new JString>=<Annotation pointer>.overlayText;
+
+<Annotation pointer>.page=<page_idx>;
+<new int>=<Annotation pointer>.page;
+
+<Annotation pointer>.point=<point>;
+<new int>=<Annotation pointer>.point;
+
+<Annotation pointer>.points=<point_2>;
+<new point_2>=<Annotation pointer>.points;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.popupOpen=<boolean>;}else{<Annotation id=2 pointer>.popupOpen=!(<Annotation id=2 pointer>.popupOpen)}
+<new boolean>=<Annotation pointer>.popupOpen;
+
+<Annotation pointer>.popupRect=<oCoords>;
+<new int>=<Annotation pointer>.popupRect;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.print=<boolean>;}else{<Annotation id=2 pointer>.print=!(<Annotation id=2 pointer>.print)}
+<new boolean>=<Annotation pointer>.print;
+
+<Annotation pointer>.quads=<quads>;
+<new int>=<Annotation pointer>.quads;
+
+<Annotation pointer>.rect=<oCoords>;
+<new oCoords>=<Annotation pointer>.rect;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.readOnly=<boolean>;}else{<Annotation id=2 pointer>.readOnly=!(<Annotation id=2 pointer>.readOnly)}
+<new boolean>=<Annotation pointer>.readOnly;
+
+<Annotation pointer>.refType=<string_Annotation_refType>;
+<new JString>=<Annotation pointer>.refType;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.repeat=<boolean>;}else{<Annotation id=2 pointer>.repeat=!(<Annotation id=2 pointer>.repeat)}
+<new boolean>=<Annotation pointer>.repeat;
+
+<Annotation pointer>.richContents=<array elemtype=Span>;
+<new array elemtype=int>=<Annotation pointer>.richContents;
+
+<Annotation pointer>.richDefaults=<Span>;
+<new int>=<Annotation pointer>.richDefaults;
+
+<Annotation pointer>.rotate=<int_Annotation_rotate>;
+<new int>=<Annotation pointer>.rotate;
+
+<new int>=<Annotation pointer>.seqNum;
+
+<Annotation pointer>.soundIcon=<string_Annotation_soundIcon>;
+<new JString>=<Annotation pointer>.soundIcon;
+
+<Annotation pointer>.state=<string_Annotation_state>;
+<new JString>=<Annotation pointer>.state;
+
+<Annotation pointer>.stateModel=<string_Annotation_stateModel>;
+<new JString>=<Annotation pointer>.stateModel;
+
+<Annotation pointer>.strokeColor=<Color>;
+<new Color>=<Annotation pointer>.strokeColor;
+
+<Annotation pointer>.style=<string_Annotation_style>;
+<new JString>=<Annotation pointer>.style;
+
+<Annotation pointer>.subject=<string>;
+<new JString>=<Annotation pointer>.subject;
+
+<Annotation pointer>.textFont=<constant_Font>;
+<new Font>=<Annotation pointer>.textFont;
+
+if(<int id=1>%6<lt>1){<Annotation id=2 pointer>.textSize=<int min=0 max=32767>;}else if(<int id=1>%6<lt>4){<Annotation id=2 pointer>.textSize=<Annotation id=2 pointer>.textSize+(<int_attr_add>)}else{<Annotation id=2 pointer>.textSize=<Annotation id=2 pointer>.textSize*(<int_attr_mul>)}
+<new int>=<Annotation pointer>.textSize;
+
+if(<int id=1>%6<lt>2){<Annotation id=2 pointer>.toggleNoView=<boolean>;}else{<Annotation id=2 pointer>.toggleNoView=!(<Annotation id=2 pointer>.toggleNoView)}
+<new boolean>=<Annotation pointer>.toggleNoView;
+
+<new JString>=<Annotation pointer>.type;
+
+<Annotation pointer>.vertices=<array elemtype=oCoords>;
+<new array elemtype=oCoords>=<Annotation pointer>.vertices;
+
+if(<int id=1>%6<lt>1){<Annotation id=2 pointer>.width=<int>;}else if(<int id=1>%6<lt>4){<Annotation id=2 pointer>.width=<Annotation id=2 pointer>.width+(<int_attr_add>)}else{<Annotation id=2 pointer>.width=<Annotation id=2 pointer>.width*(<int_attr_mul>)}
+<new int>=<Annotation pointer>.width;
+
+!end lines
+
+<int_Annotation_alignment>=0
+<int_Annotation_alignment>=1
+<int_Annotation_alignment>=2
+
+<string_Annotation_AP>="Approved"
+<string_Annotation_AP>="AsIs"
+<string_Annotation_AP>="Confidential"
+<string_Annotation_AP>="Departmental"
+<string_Annotation_AP>="Draft"
+<string_Annotation_AP>="Experimental"
+<string_Annotation_AP>="Expired"
+<string_Annotation_AP>="Final"
+<string_Annotation_AP>="ForComment"
+<string_Annotation_AP>="ForPublicRelease"
+<string_Annotation_AP>="NotApproved"
+<string_Annotation_AP>="NotForPublicRelease"
+<string_Annotation_AP>="Sold"
+<string_Annotation_AP>="TopSecret"
+
+<string_Annotation_arrowBegin>="None"
+<string_Annotation_arrowBegin>="OpenArrow"
+<string_Annotation_arrowBegin>="ClosedArrow"
+<string_Annotation_arrowBegin>="ROpenArrow"
+<string_Annotation_arrowBegin>="RClosedArrow"
+<string_Annotation_arrowBegin>="Butt"
+<string_Annotation_arrowBegin>="Diamond"
+<string_Annotation_arrowBegin>="Circle"
+<string_Annotation_arrowBegin>="Square"
+<string_Annotation_arrowBegin>="Slash"
+
+<string_Annotation_arrowEnd>="None"
+<string_Annotation_arrowEnd>="OpenArrow"
+<string_Annotation_arrowEnd>="ClosedArrow"
+<string_Annotation_arrowEnd>="ROpenArrow"
+<string_Annotation_arrowEnd>="RClosedArrow"
+<string_Annotation_arrowEnd>="Butt"
+<string_Annotation_arrowEnd>="Diamond"
+<string_Annotation_arrowEnd>="Circle"
+<string_Annotation_arrowEnd>="Square"
+<string_Annotation_arrowEnd>="Slash"
+
+<string_Annotation_attachIcon>="Paperclip"
+<string_Annotation_attachIcon>="PushPin"
+<string_Annotation_attachIcon>="Graph"
+<string_Annotation_attachIcon>="Tag"
+
+<string_Annotation_borderEffectStyle>="C"
+<string_Annotation_borderEffectStyle>=""
+
+<string_Annotation_caretSymbol>="P"
+<string_Annotation_caretSymbol>="S"
+
+<string_Annotation_intent>="FreeTextCallout"
+<string_Annotation_intent>="PolygonCloud"
+<string_Annotation_intent>="LineArrow"
+<string_Annotation_intent>="LineDimension"
+
+<string_Annotation_lineEnding>="None"
+<string_Annotation_lineEnding>="OpenArrow"
+<string_Annotation_lineEnding>="ClosedArrow"
+<string_Annotation_lineEnding>="ROpenArrow"
+<string_Annotation_lineEnding>="RClosedArrow"
+<string_Annotation_lineEnding>="Butt"
+<string_Annotation_lineEnding>="Diamond"
+<string_Annotation_lineEnding>="Circle"
+<string_Annotation_lineEnding>="Square"
+<string_Annotation_lineEnding>="Slash"
+
+<string_Annotation_noteIcon>="Check"
+<string_Annotation_noteIcon>="Circle"
+<string_Annotation_noteIcon>="Comment"
+<string_Annotation_noteIcon>="Cross"
+<string_Annotation_noteIcon>="Help"
+<string_Annotation_noteIcon>="Insert"
+<string_Annotation_noteIcon>="Key"
+<string_Annotation_noteIcon>="NewParagraph"
+<string_Annotation_noteIcon>="Note"
+<string_Annotation_noteIcon>="Paragraph"
+<string_Annotation_noteIcon>="RightArrow"
+<string_Annotation_noteIcon>="RightPointer"
+<string_Annotation_noteIcon>="Star"
+<string_Annotation_noteIcon>="UpArrow"
+<string_Annotation_noteIcon>="UpLeftArrow"
+
+<string_Annotation_refType>="R"
+<string_Annotation_refType>="Group"
+
+<int_Annotation_rotate>=0
+<int_Annotation_rotate>=90
+<int_Annotation_rotate>=180
+<int_Annotation_rotate>=270
+
+<string_Annotation_soundIcon>="Speaker"
+
+<string_Annotation_state>="Accepted"
+<string_Annotation_state>="Rejected"
+<string_Annotation_state>="Cancelled"
+<string_Annotation_state>="Completed"
+<string_Annotation_state>="None"
+<string_Annotation_state>="Marked"
+<string_Annotation_state>="Unmarked"
+
+<string_Annotation_stateModel>="Marked"
+<string_Annotation_stateModel>="Review"
+
+<string_Annotation_style>="S"
+<string_Annotation_style>="D"
+
+<font>=font.Times
+<font>=font.TimesB
+<font>=font.TimesI
+<font>=font.TimesBI
+<font>=font.Helv
+<font>=font.HelvB
+<font>=font.HelvI
+<font>=font.HelvBI
+<font>=font.Cour
+<font>=font.CourB
+<font>=font.CourI
+<font>=font.CourBI
+<font>=font.Symbol
+<font>=font.ZapfD
+
+<callout_intarray>=[<int_small loop=6 joinstr=,>]
+<constant_callout_intarray>=[<int_small loop=6 joinstr=,>]
+<dash_intarray>=[<int_least>,<int_least>]
+<point_2>=[<point>,<point>]
+
+<annot_type>="Text"
+<annot_type>="FreeText"
+<annot_type>="Line"
+<annot_type>="Square"
+<annot_type>="Circle"
+<annot_type>="Polygon"
+<annot_type>="PolyLine"
+<annot_type>="Highlight"
+<annot_type>="Underline"
+<annot_type>="Squiggly"
+<annot_type>="StrikeOut"
+<annot_type>="Stamp"
+<annot_type>="Caret"
+<annot_type>="Ink"
+<annot_type>="FileAttachment"
+<annot_type>="Sound"

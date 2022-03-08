@@ -1,0 +1,28 @@
+
+!begin lines
+<new page useset>=<pages id=1>((<int min=0 max=10000> Mod <pages id=1>.Count)+1)
+
+#****************page methods start***********
+#****************page properties start***********
+<new Application useset>=<page>.Application
+set <page>.Application=<Application>
+<new Breaks useset>=<page>.Breaks
+set <page>.Breaks=<Breaks>
+<new Long>=<page>.Creator
+<page>.Creator=<Long>
+<new object>=<page>.EnhMetaFileBits
+<page>.EnhMetaFileBits=<object>
+<new object>=<page>.Height
+<page>.Height=<object>
+<new object>=<page>.Left
+<page>.Left=<object>
+<new object>=<page>.Parent
+<page>.Parent=<object>
+<new Rectangles useset>=<page>.Rectangles
+set <page>.Rectangles=<Rectangles>
+<new object>=<page>.Top
+<page>.Top=<object>
+<new Long>=<page>.Width
+<page>.Width=<Long>
+
+!end lines

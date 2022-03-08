@@ -1,0 +1,126 @@
+!begin lines
+#rawnotes:#	"Doc\naddAnnot Annotation call-gene_Annotation_literal\naddField Field call-new_field_name field_type page_idx oCoords\n/"field_type text button combobox listbox checkbox radiobutton signature\naddIcon - call-new_Icon_name Icon\nbringToFront -\ncalculateNow -\n--closeDoc\ncreateDataObject Data call-new_dataobject_name data_string #cMIMEType-cMIMEType #cCryptFilter-cCryptFilter\ndeletePages - #nStart-page_idx #nEnd-page_idx\nembedDocAsDataObject - call-new_dataobject_name Doc\nexportAsFDFStr - #bAllFields-boolean #bNoPassword-boolean #aFields-call-gene_Field_name_array #bFlags-boolean #bAnnotations-boolean #cHRef-string\ngetAnnots Annotation_array #nPage-page_idx #nSortBy-annot_nSortBy_constant #bReverse-boolean #nFilterBy-annot_nFilterBy_constant\n/annot_nSortBy_constant ANSB_None ANSB_Page ANSB_Author ANSB_ModDate ANSB_Type\n/annot_nFilterBy_constant ANFB_ShouldNone ANFB_ShouldPrint ANFB_ShouldView ANFB_ShouldEdit ANFB_ShouldAppearInPanel ANFB_ShouldSummarize ANFB_ShouldExport\ngetAnnotsRichMedia AnnotRichMedia_array page_idx\ngetAnnots3D Annot3D_array page_idx\ngetDataObject Data call-gene_dataobject_name\ngetDataObjectContents ReadStream call-gene_dataobject_name #bAllowAuth-boolean\ngetField Field call-gene_field_name\ngetIcon Icon call-gene_icon_name\ngetLegalWarnings DocLegalWarning boolean\ngetLinks Link_array page_idx oCoords\ngetNthFieldName field_name int_idx\n--getNthTemplate template_name int_idx\ngetOCGs OCG_array #nPage-page_idx\ngetOCGOrder OCG_array\ngetPageBox - #cBox-pagebox_constant #nPage-page_idx\n/"pagebox_constant Art Bleed BBox Crop Trim\ngetPageLabel - #nPage-page_idx\ngetPageNumWords - #nPage-page_idx\ngetPageRotation - #nPage-page_idx\ngetPageTransition - #nPage-page_idx\n--getSound\n--getTemplate\ngetUserUnitSize - page_idx\ngotoNamedDest - call-gene_dest_name\n--importAnFDF -\n--importAnXFDF\nopenDataObject Doc call-gene_dataobject_name\nremoveDataObject - call-gene_dataobject_name\nremoveField - call-gene_field_name\nresetForm - call-gene_field_name_array\nscroll - nX nY\nselectPageNthWord - #nPage-page_idx #nWord-int_bigidx #bScroll-boolean\nsetDataObjectContents - call-gene_dataobject_name ReadStream\nspawnPageFromTemplate - template_name #nPage-page_idx #bRename-boolean #bOverlay-boolean\nsyncAnnotScan -\ntimestampSign - #cDIPath-string #bUI-boolean\n\n\n\n\n\n"
+
+#<new Annotation>=<Doc pointer>.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+
+#<new Field id=1>=<Doc pointer>.addField(<string beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><oCoords beforeoutput=handle_arg last_arg>);savevar('field', <Field id=1>,<int>);
+
+<Doc pointer>.addIcon(<string beforeoutput=handle_arg first_arg><Icon beforeoutput=handle_arg last_arg>);
+
+#<new Link> = <Doc pointer>.addLink(<page_idx beforeoutput=handle_arg first_arg><constant_oCoords beforeoutput=handle_arg last_arg>)
+
+<Doc pointer>.bringToFront();
+
+<Doc pointer>.calculateNow();
+
+# ****--closeDoc****
+
+<new Data id=1>=<Doc pointer>.createDataObject(<string beforeoutput=handle_arg first_arg><string beforeoutput=handle_arg><cMIMEType beforeoutput=handle_arg last_arg optional argname=cMIMEType>);savevar('data',<Data id=1>, <int>);
+
+<Doc pointer>.deletePages(<page_idx beforeoutput=handle_dict_arg first_arg optional argname=nStart><page_idx beforeoutput=handle_dict_arg last_arg optional argname=nEnd>);
+
+<Doc pointer>.embedDocAsDataObject(<string beforeoutput=handle_arg first_arg><Doc beforeoutput=handle_arg last_arg>);
+
+<Doc pointer>.exportAsFDFStr(<boolean beforeoutput=handle_dict_arg first_arg optional argname=bAllFields><boolean beforeoutput=handle_dict_arg optional argname=bNoPassword><array elemtype=field_name beforeoutput=handle_dict_arg optional argname=aFields><boolean beforeoutput=handle_dict_arg optional argname=bFlags><boolean beforeoutput=handle_dict_arg optional argname=bAnnotations><string beforeoutput=handle_dict_arg last_arg optional argname=cHRef>);
+
+#<new array elemtype=Annotation>=<Doc pointer>.getAnnots(<page_idx beforeoutput=handle_dict_arg first_arg optional argname=nPage><annot_nSortBy_constant beforeoutput=handle_dict_arg optional argname=nSortBy><boolean beforeoutput=handle_dict_arg optional argname=bReverse><annot_nFilterBy_constant beforeoutput=handle_dict_arg last_arg optional argname=nFilterBy>);
+
+<new array elemtype=AnnotRichMedia>=<Doc pointer>.getAnnotsRichMedia(<page_idx beforeoutput=handle_arg first_arg last_arg>);
+
+<new array elemtype=Annot3D>=<Doc pointer>.getAnnots3D(<page_idx beforeoutput=handle_arg first_arg last_arg>);
+
+<new Data>=<Doc pointer>.getDataObject(<data_name beforeoutput=handle_arg first_arg last_arg>);
+
+<new ReadStream>=<Doc pointer>.getDataObjectContents(<data_name beforeoutput=handle_arg first_arg><boolean beforeoutput=handle_arg last_arg optional argname=bAllowAuth>);
+
+#<new Field>=<Doc pointer>.getField(<field_name beforeoutput=handle_arg first_arg last_arg>);
+
+#<new Icon>=<Doc pointer>.getIcon(<icon_name beforeoutput=handle_arg first_arg last_arg>);
+
+<new DocLegalWarning>=<Doc pointer>.getLegalWarnings(<boolean beforeoutput=handle_arg first_arg last_arg>);
+
+#<new Link_array>=<Doc pointer>.getLinks(<page_idx beforeoutput=handle_arg first_arg><oCoords beforeoutput=handle_arg last_arg>);
+
+<new int>=<Doc pointer>.getNthFieldName(<int_idx beforeoutput=handle_arg first_arg last_arg>%(this.numFields));
+
+# ****--getNthTemplate template_name int_idx****
+
+<new OCG_array>=<Doc pointer>.getOCGs(<page_idx beforeoutput=handle_dict_arg first_arg last_arg optional argname=nPage>);
+
+<new OCG_array>=<Doc pointer>.getOCGOrder();
+
+<Doc pointer>.getPageBox(<pagebox_constant beforeoutput=handle_dict_arg first_arg optional argname=cBox><page_idx beforeoutput=handle_dict_arg last_arg optional argname=nPage>);
+
+<Doc pointer>.getPageLabel(<page_idx beforeoutput=handle_dict_arg first_arg last_arg optional argname=nPage>);
+
+<Doc pointer>.getPageNumWords(<page_idx beforeoutput=handle_dict_arg first_arg last_arg optional argname=nPage>);
+
+<Doc pointer>.getPageRotation(<page_idx beforeoutput=handle_dict_arg first_arg last_arg optional argname=nPage>);
+
+<Doc pointer>.getPageTransition(<page_idx beforeoutput=handle_dict_arg first_arg last_arg optional argname=nPage>);
+
+# ****--getSound****
+
+# ****--getTemplate****
+
+<Doc pointer>.getUserUnitSize(<page_idx beforeoutput=handle_arg first_arg last_arg>);
+
+<Doc pointer>.gotoNamedDest(<string beforeoutput=handle_arg first_arg last_arg>);
+
+# ****--importAnFDF -****
+
+# ****--importAnXFDF****
+
+#<new Temp>=<Doc pointer>.openDataObject(<data_name beforeoutput=handle_arg first_arg last_arg>);
+
+<Doc pointer>.removeDataObject(<data_name beforeoutput=handle_arg first_arg last_arg>);
+
+<Doc pointer>.removeField(<field_name beforeoutput=handle_arg first_arg last_arg>);
+
+<Doc pointer>.resetForm(<array elemtype=field_name beforeoutput=handle_arg first_arg last_arg>);
+
+<Doc pointer>.scroll(<nX beforeoutput=handle_arg first_arg><nY beforeoutput=handle_arg last_arg>);
+
+<Doc pointer>.selectPageNthWord(<page_idx beforeoutput=handle_dict_arg first_arg optional argname=nPage><int_bigidx beforeoutput=handle_dict_arg optional argname=nWord><boolean beforeoutput=handle_dict_arg last_arg optional argname=bScroll>);
+
+<Doc pointer>.setDataObjectContents(<data_name beforeoutput=handle_arg first_arg><ReadStream beforeoutput=handle_arg last_arg>);
+
+<Doc pointer>.spawnPageFromTemplate(<template_name beforeoutput=handle_arg first_arg><page_idx beforeoutput=handle_arg optional argname=nPage><boolean beforeoutput=handle_arg optional argname=bRename><boolean beforeoutput=handle_arg last_arg optional argname=bOverlay>);
+
+<Doc pointer>.syncAnnotScan();
+
+<Doc pointer>.timestampSign(<string beforeoutput=handle_dict_arg first_arg optional argname=cDIPath><boolean beforeoutput=handle_dict_arg last_arg optional argname=bUI>);
+
+Collab.documentToStream(<Doc>);
+
+!end lines
+<field_type>="text"
+<field_type>="button"
+<field_type>="combobox"
+<field_type>="listbox"
+<field_type>="checkbox"
+<field_type>="radiobutton"
+<field_type>="signature"
+<annot_nSortBy_constant>=ANSB_None
+<annot_nSortBy_constant>=ANSB_Page
+<annot_nSortBy_constant>=ANSB_Author
+<annot_nSortBy_constant>=ANSB_ModDate
+<annot_nSortBy_constant>=ANSB_Type
+<annot_nFilterBy_constant>=ANFB_ShouldNone
+<annot_nFilterBy_constant>=ANFB_ShouldPrint
+<annot_nFilterBy_constant>=ANFB_ShouldView
+<annot_nFilterBy_constant>=ANFB_ShouldEdit
+<annot_nFilterBy_constant>=ANFB_ShouldAppearInPanel
+<annot_nFilterBy_constant>=ANFB_ShouldSummarize
+<annot_nFilterBy_constant>=ANFB_ShouldExport
+<pagebox_constant>="Art"
+<pagebox_constant>="Bleed"
+<pagebox_constant>="BBox"
+<pagebox_constant>="Crop"
+<pagebox_constant>="Trim"
+<cMIMEType>="text/plain"
+<nX>=<int min=0 max=1000>
+<nY>=<int min=0 max=1000>
+
+<data_name>=<normal_name>
+<template_name>=<normal_name>

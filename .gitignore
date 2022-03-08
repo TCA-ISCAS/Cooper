@@ -1,0 +1,9 @@
+.idea
+env
+*.pyc
+src/PdfData
+src/PdfSamples
+src/PdfInputs
+src/WordData
+src/WordSamples
+src/WordInputs

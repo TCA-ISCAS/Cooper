@@ -1,0 +1,19 @@
+!begin lines
+<Annot3D>.activated=<boolean>;
+<new boolean>=<Annot3D>.activated;
+
+
+<new TempVar>=<Annot3D>.context3D;
+
+<new Rect>=<Annot3D>.innerRect;
+
+<new JString>=<Annot3D>.name;
+
+<Annot3D>.page=<int>;
+<new int>=<Annot3D>.page;
+
+#incomplete
+<Annot3D>.rect=<array elemtype=int len=4>;
+<new Rect>=<Annot3D>.rect;
+
+!end lines

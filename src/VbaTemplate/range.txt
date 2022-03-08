@@ -1,0 +1,274 @@
+
+<range>=<Range>
+!begin lines
+#****************range methods start***********
+<range>.AutoFormat
+<range>.Calculate
+<range>.CheckGrammar
+#<range>.CheckSpelling <Variant optional arg argname=CustomDictionary><Variant optional arg argname=IgnoreUppercase><Variant optional arg argname=AlwaysSuggest><Dictionary optional arg argname=CustomDictionary2><Dictionary optional arg argname=CustomDictionary3><Dictionary optional arg argname=CustomDictionary4><Dictionary optional arg argname=CustomDictionary5><Dictionary optional arg argname=CustomDictionary6><Dictionary optional arg argname=CustomDictionary7><Dictionary optional arg argname=CustomDictionary8><Dictionary optional arg argname=CustomDictionary9><Dictionary optional arg argname=CustomDictionary10>
+<range>.CheckSynonyms
+<range>.Collapse <WdCollapseDirection optional arg argname=Direction>
+<range>.ComputeStatistics <WdStatistic arg argname=Statistic>
+<range>.ConvertHangulAndHanja <WdMultipleWordConversionsMode optional arg argname=ConversionsMode><Variant optional arg argname=FastConversion><Variant optional arg argname=CheckHangulEnding><Variant optional arg argname=EnableRecentOrdering><Variant optional arg argname=CustomDictionary>
+<new Table useset>=<range>.ConvertToTable(<WdTableFieldSeparator  optional arg argname=Separator><Variant optional arg argname=NumRows><Variant optional arg argname=NumColumns><Variant optional arg argname=InitialColumnWidth><Variant optional arg argname=Format><Variant optional arg argname=ApplyBorders><Variant optional arg argname=ApplyShading><Variant optional arg argname=ApplyFont><Variant optional arg argname=ApplyColor><Variant optional arg argname=ApplyHeadingRows><Variant optional arg argname=ApplyLastRow><Variant optional arg argname=ApplyFirstColumn><Variant optional arg argname=ApplyLastColumn><Variant optional arg argname=AutoFit><Variant optional arg argname=AutoFitBehavior><Variant optional arg argname=DefaultTableBehavior>)
+<range>.Copy
+<range>.CopyAsPicture
+<range>.Cut
+<new Long>=<range>.Delete(<WdUnits optional arg argname=Unit><small_int optional arg argname=Count>)
+<range>.DetectLanguage
+<range>.EndOf <WdUnits optional arg argname=Unit><WdMovementType arg argname=Extend>
+<range>.Expand <WdUnits optional arg argname=Unit>
+<range>.ExportAsFixedFormat <String arg argname=OutputFileName><WdExportFormat arg argname=ExportFormat><Boolean optional arg argname=OpenAfterExport><WdExportOptimizeFor optional arg argname=OptimizeFor><Boolean optional arg argname=ExportCurrentPage><WdExportItem optional arg argname=Item><Boolean optional arg argname=IncludeDocProps><Boolean optional arg argname=KeepIRM><WdExportCreateBookmarks optional arg argname=CreateBookmarks><Boolean optional arg argname=DocStructureTags><Boolean optional arg argname=BitmapMissingFonts><Boolean optional arg argname=UseISO19005_1><Variant optional arg argname=FixedFormatExtClassPtr>
+<range>.ExportAsFixedFormat2 <String arg argname=OutputFileName><WdExportFormat arg argname=ExportFormat><Boolean optional arg argname=OpenAfterExport><WdExportOptimizeFor optional arg argname=OptimizeFor><Boolean optional arg argname=ExportCurrentPage><WdExportItem optional arg argname=Item><Boolean optional arg argname=IncludeDocProps><Boolean optional arg argname=KeepIRM><WdExportCreateBookmarks optional arg argname=CreateBookmarks><Boolean optional arg argname=DocStructureTags><Boolean optional arg argname=BitmapMissingFonts><Boolean optional arg argname=UseISO19005_1><Boolean optional arg argname=OptimizeForImageQuality><Variant optional arg argname=FixedFormatExtClassPtr>
+<new Nothing useset>=<range>.ExportFragment(<String arg argname=FileName><WdSaveFormat arg argname=Format>)
+<new SpellingSuggestions useset>=<range>.GetSpellingSuggestions(<Variant optional arg argname=CustomDictionary><Variant optional arg argname=IgnoreUppercase><Variant optional arg argname=MainDictionary><Variant optional arg argname=SuggestionMode><Variant optional arg argname=CustomDictionary2><Variant optional arg argname=CustomDictionary3><Variant optional arg argname=CustomDictionary4><Variant optional arg argname=CustomDictionary5><Variant optional arg argname=CustomDictionary6><Variant optional arg argname=CustomDictionary7><Variant optional arg argname=CustomDictionary8><Variant optional arg argname=CustomDictionary9><Variant optional arg argname=CustomDictionary10>)
+<range>.GoTo <WdGoToItem optional arg argname=What><WdGoToDirection optional arg argname=Which><small_int optional arg argname=Count><Variant optional arg argname=Name>
+<range>.GoToEditableRange
+<range>.GoToNext <WdGoToItem arg argname=What>
+<range>.GoToPrevious <WdGoToItem arg argname=What>
+<new Nothing useset>=<range>.ImportFragment(<String arg argname=FileName><Boolean optional arg argname=MatchDestination>)
+<new Boolean>=<range>.InRange(<Range arg argname=Range>)
+<range>.InsertAfter <String arg argname=Text>
+<range>.InsertAlignmentTab <Long arg argname=Alignment><Long optional arg argname=RelativeTo>
+<range>.InsertAutoText
+<range>.InsertBefore <String arg argname=Text>
+<range>.InsertBreak <WdBreakType optional arg argname=Type>
+<range>.InsertCaption <WdCaptionLabelID arg argname=Label><String optional arg argname=Title><Variant optional arg argname=TitleAutoText><WdCaptionPosition optional arg argname=Position><boolean optional arg argname=ExcludeLabel>
+<range>.InsertCrossReference <Variant arg argname=ReferenceType><WdReferenceKind arg argname=ReferenceKind><Variant arg argname=ReferenceItem><Variant optional arg argname=InsertAsHyperlink><Variant optional arg argname=IncludePosition><Variant optional arg argname=SeparateNumbers><Variant optional arg argname=SeparatorString>
+<range>.InsertDatabase <Variant optional arg argname=Format><Variant optional arg argname=Style><Variant optional arg argname=LinkToSource><Variant optional arg argname=Connection><String optional arg argname=SQLStatement><String optional arg argname=SQLStatement1><Variant optional arg argname=PasswordDocument><Variant optional arg argname=PasswordTemplate><Variant optional arg argname=WritePasswordDocument><Variant optional arg argname=WritePasswordTemplate><Variant optional arg argname=DataSource><Variant optional arg argname=From><Variant optional arg argname=To><Variant optional arg argname=IncludeFields>
+<range>.InsertDateTime <Variant optional arg argname=DateTimeFormat><Variant optional arg argname=InsertAsField><Variant optional arg argname=InsertAsFullWidth><Variant optional arg argname=DateLanguage><Variant optional arg argname=CalendarType>
+<range>.InsertFile <String arg argname=FileName><Variant optional arg argname=Range><Variant optional arg argname=ConfirmConversions><Variant optional arg argname=Link><Variant optional arg argname=Attachment>
+<range>.InsertParagraph
+<range>.InsertParagraphAfter
+<range>.InsertParagraphBefore
+<range>.InsertSymbol <Long arg argname=CharacterNumber><Variant optional arg argname=Font><Variant optional arg argname=Unicode><Variant optional arg argname=Bias>
+<new Nothing useset>=<range>.InsertXML(<String arg argname=XML><Variant optional arg argname=Transform>)
+<new Boolean>=<range>.InStory(<Range arg argname=Range>)
+<new Boolean>=<range>.IsEqual(<Range arg argname=Range>)
+<range>.LookupNameProperties
+<range>.ModifyEnclosure <Variant arg argname=Style><Variant optional arg argname=Symbol><Variant optional arg argname=EnclosedText>
+<new Long>=<range>.Move(<WdUnits optional arg argname=Unit><small_int optional arg argname=Count>)
+<range>.MoveEnd <WdUnits optional arg argname=Unit><small_int optional arg argname=Count>
+<range>.MoveEndUntil <String arg argname=Cset><small_int optional arg argname=Count>
+<range>.MoveEndWhile <String arg argname=Cset><small_int optional arg argname=Count>
+<new Integer>=<range>.MoveStart(<WdUnits optional arg argname=Unit><small_int optional arg argname=Count>)
+<range>.MoveStartUntil <String arg argname=Cset><small_int optional arg argname=Count>
+<range>.MoveStartWhile <String arg argname=Cset><small_int optional arg argname=Count>
+<range>.MoveUntil <String arg argname=Cset><small_int optional arg argname=Count>
+<range>.MoveWhile <String arg argname=Cset><small_int optional arg argname=Count>
+<new Range useset>=<range>.Next(<WdUnits optional arg argname=Unit><small_int optional arg argname=Count>)
+<range>.NextSubdocument
+<range>.Paste
+<range>.PasteAndFormat <WdRecoveryType arg argname=Type>
+<range>.PasteAppendTable
+<range>.PasteAsNestedTable
+<range>.PasteExcelTable <Boolean arg argname=LinkedToExcel><Boolean arg argname=WordFormatting><Boolean arg argname=RTF>
+<range>.PasteSpecial <Variant optional arg argname=IconIndex><Variant optional arg argname=Link><Variant optional arg argname=Placement><Variant optional arg argname=DisplayAsIcon><Variant optional arg argname=DataType><Variant optional arg argname=IconFileName><Variant optional arg argname=IconLabel>
+<range>.PhoneticGuide <String arg argname=Text><WdPhoneticGuideAlignmentType optional arg argname=Alignment><Long optional arg argname=Raise><Long optional arg argname=FontSize><String optional arg argname=FontName>
+<new Range useset>=<range>.Previous(<WdUnits optional arg argname=Unit><small_int optional arg argname=Count>)
+<range>.PreviousSubdocument
+<range>.Relocate <WdRelocate arg argname=Direction>
+<range>.Select
+<range>.SetListLevel <Integer arg argname=Level>
+<range>.SetRange <Long arg argname=Start><Long arg argname=End>
+<range>.Sort <boolean optional arg argname=ExcludeHeader><small_int optional arg argname=FieldNumber><WdSortFieldType optional arg argname=SortFieldType><WdSortOrder optional arg argname=SortOrder><small_int optional arg argname=FieldNumber2><WdSortFieldType optional arg argname=SortFieldType2><WdSortOrder optional arg argname=SortOrder2><small_int optional arg argname=FieldNumber3><WdSortFieldType arg argname=SortFieldType3><WdSortOrder optional arg argname=SortOrder3><boolean optional arg argname=SortColumn><WdSortSeparator optional arg argname=Separator><boolean optional arg argname=CaseSensitive><boolean optional arg argname=BidiSort><boolean optional arg argname=IgnoreThe><boolean optional arg argname=IgnoreKashida><boolean optional arg argname=IgnoreDiacritics><boolean optional arg argname=IgnoreHe><WdLanguageID optional arg argname=LanguageID>
+<range>.SortAscending
+<new VOID useset>=<range>.SortByHeadings(<Variant optional arg argname=SortFieldType><Variant optional arg argname=SortOrder><Variant optional arg argname=CaseSensitive><Variant optional arg argname=BidiSort><Variant optional arg argname=IgnoreThe><Variant optional arg argname=IgnoreKashida><Variant optional arg argname=IgnoreDiacritics><Variant optional arg argname=IgnoreHe><Variant optional arg argname=LanguageID>)
+<range>.SortDescending
+<range>.StartOf <WdUnits optional arg argname=Unit><WdMovementType optional arg argname=Extend>
+<range>.TCSCConverter <WdTCSCConverterDirection optional arg argname=WdTCSCConverterDirection><Boolean optional arg argname=UseVariants>
+<range>.WholeStory
+#****************range properties start***********
+<new Application useset>=<range>.Application
+set <range>.Application=<Application>
+<new Long>=<range>.Bold
+<range>.Bold=<Long>
+<new Long>=<range>.BoldBi
+<range>.BoldBi=<Long>
+<new Long>=<range>.BookmarkID
+<range>.BookmarkID=<Long>
+<new Bookmarks useset>=<range>.Bookmarks
+set <range>.Bookmarks=<Bookmarks>
+<new Borders useset>=<range>.Borders
+set <range>.Borders=<Borders>
+<new object>=<range>.Case
+<range>.Case=<WdCharacterCase>
+<new Cells useset>=<range>.Cells
+set <range>.Cells=<Cells>
+<new Characters useset>=<range>.Characters
+set <range>.Characters=<Characters>
+<new Variant useset>=<range>.CharacterStyle
+set <range>.CharacterStyle=<Variant>
+<new object>=<range>.CharacterWidth
+<range>.CharacterWidth=<WdCharacterWidth>
+<new Columns useset>=<range>.Columns
+set <range>.Columns=<Columns>
+<new Boolean>=<range>.CombineCharacters
+<range>.CombineCharacters=<Boolean>
+<new Comments useset>=<range>.Comments
+set <range>.Comments=<Comments>
+<new Conflicts useset>=<range>.Conflicts
+set <range>.Conflicts=<Conflicts>
+<new ContentControls useset>=<range>.ContentControls
+set <range>.ContentControls=<ContentControls>
+<new Long>=<range>.Creator
+<range>.Creator=<Long>
+<new Boolean>=<range>.DisableCharacterSpaceGrid
+<range>.DisableCharacterSpaceGrid=<Boolean>
+<new Document useset>=<range>.Document
+set <range>.Document=<Document>
+<new Range useset>=<range>.Duplicate
+set <range>.Duplicate=<Range>
+<new Editors useset>=<range>.Editors
+set <range>.Editors=<Editors>
+<new object>=<range>.EmphasisMark
+<range>.EmphasisMark=<WdEmphasisMark>
+<new Long>=<range>.End
+<range>.End=<Long>
+<new EndnoteOptions useset>=<range>.EndnoteOptions
+set <range>.EndnoteOptions=<EndnoteOptions>
+<new Endnotes useset>=<range>.Endnotes
+set <range>.Endnotes=<Endnotes>
+<new Variant useset>=<range>.EnhMetaFileBits
+set <range>.EnhMetaFileBits=<Variant>
+<new Fields useset>=<range>.Fields
+set <range>.Fields=<Fields>
+<new Find useset>=<range>.Find
+set <range>.Find=<Find>
+<new Single>=<range>.FitTextWidth
+<range>.FitTextWidth=<Single>
+<new Font useset>=<range>.Font
+set <range>.Font=<Font>
+<new FootnoteOptions useset>=<range>.FootnoteOptions
+set <range>.FootnoteOptions=<FootnoteOptions>
+<new Footnotes useset>=<range>.Footnotes
+set <range>.Footnotes=<Footnotes>
+<new Range useset>=<range>.FormattedText
+set <range>.FormattedText=<Range>
+<new FormFields useset>=<range>.FormFields
+set <range>.FormFields=<FormFields>
+<new Frames useset>=<range>.Frames
+set <range>.Frames=<Frames>
+<new Boolean>=<range>.GrammarChecked
+<range>.GrammarChecked=<Boolean>
+<new ProofreadingErrors useset>=<range>.GrammaticalErrors
+set <range>.GrammaticalErrors=<ProofreadingErrors>
+<new object>=<range>.HighlightColorIndex
+<range>.HighlightColorIndex=<WdColorIndex>
+<new object>=<range>.WdHorizontalInVerticalType
+<range>.HorizontalInVertical=<WdHorizontalInVerticalType>
+<new HTMLDivisions useset>=<range>.HTMLDivisions
+set <range>.HTMLDivisions=<HTMLDivisions>
+<new Hyperlinks useset>=<range>.Hyperlinks
+set <range>.Hyperlinks=<Hyperlinks>
+<new String>=<range>.ID
+<range>.ID=<String>
+<new Variant useset>=<range>.Information
+set <range>.Information=<Variant>
+<new InlineShapes useset>=<range>.InlineShapes
+set <range>.InlineShapes=<InlineShapes>
+<new Boolean>=<range>.IsEndOfRowMark
+<range>.IsEndOfRowMark=<Boolean>
+<new Long>=<range>.Italic
+<range>.Italic=<Long>
+<new Long>=<range>.ItalicBi
+<range>.ItalicBi=<Long>
+<new object>=<range>.Kana
+<range>.Kana=<WdKana>
+<new Boolean>=<range>.LanguageDetected
+<range>.LanguageDetected=<Boolean>
+<new object>=<range>.LanguageID
+<range>.LanguageID=<WdLanguageID>
+<new object>=<range>.LanguageIDFarEast
+<range>.LanguageIDFarEast=<WdLanguageID>
+<new object>=<range>.LanguageIDOther
+<range>.LanguageIDOther=<WdLanguageID>
+<new ListFormat useset>=<range>.ListFormat
+set <range>.ListFormat=<ListFormat>
+<new ListParagraphs useset>=<range>.ListParagraphs
+set <range>.ListParagraphs=<ListParagraphs>
+<new Variant useset>=<range>.ListStyle
+set <range>.ListStyle=<Variant>
+<new CoAuthLocks useset>=<range>.Locks
+set <range>.Locks=<CoAuthLocks>
+<new Range useset>=<range>.NextStoryRange
+set <range>.NextStoryRange=<Range>
+<new Long>=<range>.NoProofing
+<range>.NoProofing=<Long>
+<new OMaths useset>=<range>.OMaths
+set <range>.OMaths=<OMaths>
+<new object>=<range>.Orientation
+<range>.Orientation=<WdTextOrientation>
+<new PageSetup useset>=<range>.PageSetup
+set <range>.PageSetup=<PageSetup>
+<new ParagraphFormat useset>=<range>.ParagraphFormat
+set <range>.ParagraphFormat=<ParagraphFormat>
+<new Paragraphs useset>=<range>.Paragraphs
+set <range>.Paragraphs=<Paragraphs>
+<new Variant useset>=<range>.ParagraphStyle
+set <range>.ParagraphStyle=<Variant>
+<new Parent useset>=<range>.Parent
+set <range>.Parent=<Parent>
+<new ContentControl useset>=<range>.ParentContentControl
+set <range>.ParentContentControl=<ContentControl>
+<new Long>=<range>.PreviousBookmarkID
+<range>.PreviousBookmarkID=<Long>
+<new ReadabilityStatistics useset>=<range>.ReadabilityStatistics
+set <range>.ReadabilityStatistics=<ReadabilityStatistics>
+<new Revisions useset>=<range>.Revisions
+set <range>.Revisions=<Revisions>
+<new Rows useset>=<range>.Rows
+set <range>.Rows=<Rows>
+<new Scripts useset>=<range>.Scripts
+set <range>.Scripts=<Scripts>
+<new Sections useset>=<range>.Sections
+set <range>.Sections=<Sections>
+<new Sentences useset>=<range>.Sentences
+set <range>.Sentences=<Sentences>
+<new Shading useset>=<range>.Shading
+set <range>.Shading=<Shading>
+<new ShapeRange useset>=<range>.ShapeRange
+set <range>.ShapeRange=<ShapeRange>
+<new Boolean>=<range>.ShowAll
+<range>.ShowAll=<Boolean>
+<new Boolean>=<range>.SpellingChecked
+<range>.SpellingChecked=<Boolean>
+<new ProofreadingErrors useset>=<range>.SpellingErrors
+set <range>.SpellingErrors=<ProofreadingErrors>
+<new Long>=<range>.Start
+<range>.Start=<Long>
+<new Long>=<range>.StoryLength
+<range>.StoryLength=<Long>
+<new WdStoryType useset>=<range>.StoryType
+set <range>.StoryType=<WdStoryType>
+<new Variant useset>=<range>.Style
+set <range>.Style=<Variant>
+<new Subdocuments useset>=<range>.Subdocuments
+set <range>.Subdocuments=<Subdocuments>
+<new SynonymInfo useset>=<range>.SynonymInfo
+set <range>.SynonymInfo=<SynonymInfo>
+<new Tables useset>=<range>.Tables
+set <range>.Tables=<Tables>
+<new Variant useset>=<range>.TableStyle
+set <range>.TableStyle=<Variant>
+<new String>=<range>.Text
+<range>.Text=<String>
+<new TextRetrievalMode useset>=<range>.TextRetrievalMode
+set <range>.TextRetrievalMode=<TextRetrievalMode>
+<new Long>=<range>.TextVisibleOnScreen
+<range>.TextVisibleOnScreen=<Long>
+<new Tables useset>=<range>.TopLevelTables
+set <range>.TopLevelTables=<Tables>
+<new object>=<range>.TwoLinesInOne
+<range>.TwoLinesInOne=<WdTwoLinesInOneType>
+<new object>=<range>.Underline
+<range>.Underline=<WdUnderline>
+<new CoAuthUpdates useset>=<range>.Updates
+set <range>.Updates=<CoAuthUpdates>
+<new String>=<range>.WordOpenXML
+<range>.WordOpenXML=<String>
+<new Words useset>=<range>.Words
+set <range>.Words=<Words>
+<new String>=<range>.XML
+<range>.XML=<String>
+!end lines

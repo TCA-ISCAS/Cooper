@@ -1,0 +1,124 @@
+<app>=app
+<app.media>=app.media
+
+<Date nonrecursive>=new Date()
+<Date nonrecursive>=new Date()
+
+<normal_name>="foo<int min=0 max=200>"
+<normal_name>="foo<int min=0 max=200>"
+<normal_name>="foo<int min=0 max=200>"
+<normal_name>="foo<int min=0 max=200>"
+<normal_name>="foo<int min=0 max=200>"
+<normal_name>="foo<int min=0 max=200>"
+<normal_name>=<string>
+
+<oCoords nonrecursive>=[<xll>,<yll>,<xur>,<yur>]
+<oCoords nonrecursive>=[<xll>,<yll>,<xur>,<yur>]
+<constant_oCoords nonrecursive>=[<xll>,<yll>,<xur>,<yur>]
+<point>=[<xll>,<yll>]
+<point>=[<xll>,<yur>]
+<point>=[<xur>,<yll>]
+<point>=[<xur>,<yur>]
+<point>=[<xll>,<yll>]
+<point>=[<xll>,<yur>]
+<point>=[<xur>,<yll>]
+<point>=[<xur>,<yur>]
+<point_2>=[<point>,<point>]
+<constant_point_2>=[<point>,<point>]
+<single_quad>=<xll>,<xur>,<xll>,<xur>,<xll>,<xur>,<xll>,<xur>,
+<single_quad>=<xur>,<xll>,<xur>,<xll>,<xur>,<xll>,<xur>,<xll>,
+<quads>=[<single_quad minloop=1 maxloop=20>]
+<int_bigidx>=<int min=0 max=3000>
+<int_idx>=<int min=0 max=16>
+<idx>=0
+<idx>=0
+<idx>=1
+<idx>=1
+<idx>=<int min=0 max=1>
+<idx>=<int min=0 max=3>
+<idx>=<int min=0 max=1>
+<idx>=<int min=0 max=3>
+<idx>=<int min=0 max=256>
+
+<page_idx>=<idx>
+
+<boolean>=false
+<boolean>=true
+
+<charcode> = <int min=32 max=126>
+<unicode> = <int min=0 max=1114111>
+<JString> = "foo"
+<JString> = "1"
+<new JString> = String.fromCharCode(<charcode minloop=1 maxloop=34 joinstr=,>)
+
+<JString_constant> = "foo"
+<JString_constant> = "1"
+!begin helperlines
+<new JString_constant> = String.fromCharCode(<charcode minloop=1 maxloop=34 joinstr=,>)
+!end lines
+<Color>=color.transparent
+<Color>=color.black
+<Color>=color.white
+<Color>=color.red
+<Color>=color.green
+<Color>=color.blue
+<Color>=color.cyan
+<Color>=color.magenta
+<Color>=color.yellow
+<Color>=color.dkGray
+<Color>=color.gray
+<Color>=color.ltGray
+<Color>=["RGB",<float min=0 max=1>,<float min=0 max=1>,<float min=0 max=1>]
+<Color>=["R",<float min=0 max=1>]
+<Color>=["G",<float min=0 max=1>]
+<Color>=["B",<float min=0 max=1>]
+<Color>=["CMYK",<float min=0 max=1>,<float min=0 max=1>,<float min=0 max=1>,<float min=0 max=1>]
+
+<constant_Color>=color.transparent
+<constant_Color>=color.black
+<constant_Color>=color.white
+<constant_Color>=color.red
+<constant_Color>=color.green
+<constant_Color>=color.blue
+<constant_Color>=color.cyan
+<constant_Color>=color.magenta
+<constant_Color>=color.yellow
+<constant_Color>=color.dkGray
+<constant_Color>=color.gray
+<constant_Color>=color.ltGray
+<constant_Color>=["RGB",<float min=0 max=1>,<float min=0 max=1>,<float min=0 max=1>]
+<constant_Color>=["R",<float min=0 max=1>]
+<constant_Color>=["G",<float min=0 max=1>]
+<constant_Color>=["B",<float min=0 max=1>]
+<constant_Color>=["CMYK",<float min=0 max=1>,<float min=0 max=1>,<float min=0 max=1>,<float min=0 max=1>]
+
+
+<Font>=font.Times
+<Font>=font.TimesB
+<Font>=font.TimesI
+<Font>=font.TimesBI
+<Font>=font.Helv
+<Font>=font.HelvB
+<Font>=font.HelvI
+<Font>=font.HelvBI
+<Font>=font.Cour
+<Font>=font.CourB
+<Font>=font.CourI
+<Font>=font.CourBI
+<Font>=font.Symbol
+<Font>=font.ZapfD
+
+<constant_Font>=font.Times
+<constant_Font>=font.TimesB
+<constant_Font>=font.TimesI
+<constant_Font>=font.TimesBI
+<constant_Font>=font.Helv
+<constant_Font>=font.HelvB
+<constant_Font>=font.HelvI
+<constant_Font>=font.HelvBI
+<constant_Font>=font.Cour
+<constant_Font>=font.CourB
+<constant_Font>=font.CourI
+<constant_Font>=font.CourBI
+<constant_Font>=font.Symbol
+<constant_Font>=font.ZapfD

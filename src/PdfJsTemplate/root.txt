@@ -1,0 +1,19 @@
+!include PdfJsTemplate/AnnotationMethodLine.txt
+!include PdfJsTemplate/AnnotationPropertyLine.txt
+!include PdfJsTemplate/FieldMethodLine.txt
+!include PdfJsTemplate/FieldPropertyLine.txt
+!include PdfJsTemplate/block.txt
+!include PdfJsTemplate/common.txt
+!include PdfJsTemplate/app.txt
+!include PdfJsTemplate/functionLine.txt
+!include PdfJsTemplate/DocPropertyLine.txt
+!include PdfJsTemplate/DocMethodLine.txt
+!include PdfJsTemplate/IconIconStream.txt
+!include PdfJsTemplate/AlternatePresentation.txt
+!include PdfJsTemplate/annotAttachment.txt
+!include PdfJsTemplate/AnnotRichMedia.txt
+!include PdfJsTemplate/Annot3D.txt
+!include PdfJsTemplate/Bookmark.txt
+
+!lineguard try{<line>}catch(e){console.println(e)}
+

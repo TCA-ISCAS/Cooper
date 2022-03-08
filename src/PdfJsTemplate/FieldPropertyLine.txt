@@ -1,0 +1,239 @@
+#rawnotes:#    "Field\nalignment string left center right\nborderStyle int border.s border.b border.d border.i border.u\nbuttonAlignX int_small\nbuttonAlignY int_small\nbuttonFitBounds boolean\nbuttonPosition int position.textOnly position.iconOnly position.iconTextV position.textIconV position.iconTextH position.textIconH position.overlay\nbuttonScaleHow int scaleHow.proportional scaleHow.anamorphic\nbuttonScaleWhen int scaleWhen.always scaleWhen.never scaleWhen.tooBig scaleWhen.tooSmall\ncalcOrderIndex int_small\ncharLimit int_small\ncomb boolean\ncommitOnSelChange boolean\n-currentValueIndices int\n-currentValueIndices array-int_small\ndefaultStyle Span\ndefaultValue string\ndoNotScroll boolean\ndoNotSpellCheck boolean\ndelay boolean\ndisplay int display.visible display.hidden display.noPrint display.noView\n--doc\neditable boolean\nexportValues array-string\nfillColor color_array\nhidden boolean\nhighlight int highlight.n highlight.i highlight.p highlight.o\nlineWidth int 0 1 2 3 4\nmultiline boolean\nmultipleSelection boolean\nr-name string\nr-numItems int\nr-page int\npassword boolean\nprint boolean\nradiosInUnison boolean\nreadonly boolean\nrect coordinates\nrequired boolean\nrichText boolean\nrichValue array-Span\nrotation int 0 90 180 270\nstrokeColor color_array\nstyle int style.ch style.cr style.di style.ci style.st style.sq\nsubmitName string\ntextColor color_array\ntextFont int font.Times font.TimesB font.TimesI font.TimesBI font.Helv font.HelvB font.HelvI font.HelvBI font.Cour font.CourB font.CourI font.CourBI font.Symbol font.ZapfD\ntextSize-0-32767\nr-type string\nuserName string\nvalue string\nvalue int\nvalue array-int\nvalur array-string\nr-valueAsString\n\n\n\n\n"
+
+!begin lines
+<Field pointer>.alignment=<string_Field_alignment>;
+<new JString>=<Field pointer>.alignment;
+
+<Field pointer>.borderStyle=<int_Field_borderStyle>;
+<new int>=<Field pointer>.borderStyle;
+
+if(<int id=1>%6<lt>1){<Field id=2 pointer>.buttonAlignX=<int_small>;}else if(<int id=1>%6<lt>4){<Field id=2 pointer>.buttonAlignX=<Field id=2 pointer>.buttonAlignX+(<int_attr_add>)}else{<Field id=2 pointer>.buttonAlignX=<Field id=2 pointer>.buttonAlignX*(<int_attr_mul>)}
+<new int_small>=<Field pointer>.buttonAlignX;
+
+if(<int id=1>%6<lt>1){<Field id=2 pointer>.buttonAlignY=<int_small>;}else if(<int id=1>%6<lt>4){<Field id=2 pointer>.buttonAlignY=<Field id=2 pointer>.buttonAlignY+(<int_attr_add>)}else{<Field id=2 pointer>.buttonAlignY=<Field id=2 pointer>.buttonAlignY*(<int_attr_mul>)}
+<new int_small>=<Field pointer>.buttonAlignY;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.buttonFitBounds=<boolean>;}else{<Field id=2 pointer>.buttonFitBounds=!(<Field id=2 pointer>.buttonFitBounds)}
+<new boolean>=<Field pointer>.buttonFitBounds;
+
+<Field pointer>.buttonPosition=<int_Field_buttonPosition>;
+<new int>=<Field pointer>.buttonPosition;
+
+<Field pointer>.buttonScaleHow=<int_Field_buttonScaleHow>;
+<new int>=<Field pointer>.buttonScaleHow;
+
+<Field pointer>.buttonScaleWhen=<int_Field_buttonScaleWhen>;
+<new int>=<Field pointer>.buttonScaleWhen;
+
+if(<int id=1>%6<lt>1){<Field id=2 pointer>.calcOrderIndex=<int_small>;}else if(<int id=1>%6<lt>4){<Field id=2 pointer>.calcOrderIndex=<Field id=2 pointer>.calcOrderIndex+(<int_attr_add>)}else{<Field id=2 pointer>.calcOrderIndex=<Field id=2 pointer>.calcOrderIndex*(<int_attr_mul>)}
+<new int_small>=<Field pointer>.calcOrderIndex;
+
+if(<int id=1>%6<lt>1){<Field id=2 pointer>.charLimit=<int_small>;}else if(<int id=1>%6<lt>4){<Field id=2 pointer>.charLimit=<Field id=2 pointer>.charLimit+(<int_attr_add>)}else{<Field id=2 pointer>.charLimit=<Field id=2 pointer>.charLimit*(<int_attr_mul>)}
+<new int_small>=<Field pointer>.charLimit;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.comb=<boolean>;}else{<Field id=2 pointer>.comb=!(<Field id=2 pointer>.comb)}
+<new boolean>=<Field pointer>.comb;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.commitOnSelChange=<boolean>;}else{<Field id=2 pointer>.commitOnSelChange=!(<Field id=2 pointer>.commitOnSelChange)}
+<new boolean>=<Field pointer>.commitOnSelChange;
+
+# ****-currentValueIndices int****
+if(<int id=1>%6<lt>1){<Field id=2 pointer>.currentValueIndices=<int>;}else if(<int id=1>%6<lt>4){<Field id=2 pointer>.currentValueIndices=<Field id=2 pointer>.currentValueIndices+(<int_attr_add>)}else{<Field id=2 pointer>.currentValueIndices=<Field id=2 pointer>.currentValueIndices*(<int_attr_mul>)}
+<new int>=<Field pointer>.currentValueIndices;
+
+# ****-currentValueIndices array-int_small****
+<Field pointer>.currentValueIndices=<array elemtype=int_small>;
+<new int>=<Field pointer>.currentValueIndices;
+
+<Field pointer>.defaultStyle=<Span>;
+<new int>=<Field pointer>.defaultStyle;
+
+<Field pointer>.defaultValue=<string>;
+<new JString>=<Field pointer>.defaultValue;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.doNotScroll=<boolean>;}else{<Field id=2 pointer>.doNotScroll=!(<Field id=2 pointer>.doNotScroll)}
+<new boolean>=<Field pointer>.doNotScroll;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.doNotSpellCheck=<boolean>;}else{<Field id=2 pointer>.doNotSpellCheck=!(<Field id=2 pointer>.doNotSpellCheck)}
+<new boolean>=<Field pointer>.doNotSpellCheck;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.delay=<boolean>;}else{<Field id=2 pointer>.delay=!(<Field id=2 pointer>.delay)}
+<new boolean>=<Field pointer>.delay;
+
+<Field pointer>.display=<int_Field_display>;
+<new int>=<Field pointer>.display;
+
+# ****--doc****
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.editable=<boolean>;}else{<Field id=2 pointer>.editable=!(<Field id=2 pointer>.editable)}
+<new boolean>=<Field pointer>.editable;
+
+<Field pointer>.exportValues=<array elemtype=string>;
+<new int>=<Field pointer>.exportValues;
+
+<Field pointer>.fillColor=<Color>;
+#<new Color>=<Field pointer>.fillColor;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.hidden=<boolean>;}else{<Field id=2 pointer>.hidden=!(<Field id=2 pointer>.hidden)}
+<new boolean>=<Field pointer>.hidden;
+
+<Field pointer>.highlight=<int_Field_highlight>;
+<new int>=<Field pointer>.highlight;
+
+<Field pointer>.lineWidth=<int_Field_lineWidth>;
+<new int>=<Field pointer>.lineWidth;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.multiline=<boolean>;}else{<Field id=2 pointer>.multiline=!(<Field id=2 pointer>.multiline)}
+<new boolean>=<Field pointer>.multiline;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.multipleSelection=<boolean>;}else{<Field id=2 pointer>.multipleSelection=!(<Field id=2 pointer>.multipleSelection)}
+<new boolean>=<Field pointer>.multipleSelection;
+
+<new JString>=<Field pointer>.name;
+
+<new int>=<Field pointer>.numItems;
+
+<new int>=<Field pointer>.page;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.password=<boolean>;}else{<Field id=2 pointer>.password=!(<Field id=2 pointer>.password)}
+<new boolean>=<Field pointer>.password;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.print=<boolean>;}else{<Field id=2 pointer>.print=!(<Field id=2 pointer>.print)}
+<new boolean>=<Field pointer>.print;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.radiosInUnison=<boolean>;}else{<Field id=2 pointer>.radiosInUnison=!(<Field id=2 pointer>.radiosInUnison)}
+<new boolean>=<Field pointer>.radiosInUnison;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.readonly=<boolean>;}else{<Field id=2 pointer>.readonly=!(<Field id=2 pointer>.readonly)}
+<new boolean>=<Field pointer>.readonly;
+
+<Field pointer>.rect=<oCoords>;
+<new int>=<Field pointer>.rect;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.required=<boolean>;}else{<Field id=2 pointer>.required=!(<Field id=2 pointer>.required)}
+<new boolean>=<Field pointer>.required;
+
+if(<int id=1>%6<lt>2){<Field id=2 pointer>.richText=<boolean>;}else{<Field id=2 pointer>.richText=!(<Field id=2 pointer>.richText)}
+<new boolean>=<Field pointer>.richText;
+
+<Field pointer>.richValue=<array elemtype=Span>;
+#<new array elemtype=Span>=<Field pointer>.richValue;
+
+<Field pointer>.rotation=<int_Field_rotation>;
+<new int>=<Field pointer>.rotation;
+
+<Field pointer>.strokeColor=<Color>;
+#<new Color>=<Field pointer>.strokeColor;
+
+<Field pointer>.style=<int_Field_style>;
+<new int>=<Field pointer>.style;
+
+<Field pointer>.submitName=<string>;
+<new JString>=<Field pointer>.submitName;
+
+<Field pointer>.textColor=<Color>;
+#<new Color>=<Field pointer>.textColor;
+
+<Field pointer>.textFont=<int_Field_textFont>;
+<new int>=<Field pointer>.textFont;
+
+# ****textSize-0-32767****
+
+<new JString>=<Field pointer>.type;
+
+<Field pointer>.userName=<string>;
+<new JString>=<Field pointer>.userName;
+
+<Field pointer>.value=<string>;
+<new JString>=<Field pointer>.value;
+
+if(<int id=1>%6<lt>1){<Field id=2 pointer>.value=<int>;}else if(<int id=1>%6<lt>4){<Field id=2 pointer>.value=<Field id=2 pointer>.value+(<int_attr_add>)}else{<Field id=2 pointer>.value=<Field id=2 pointer>.value*(<int_attr_mul>)}
+<new int>=<Field pointer>.value;
+
+<Field pointer>.value=<array elemtype=int>;
+<new int>=<Field pointer>.value;
+
+<Field pointer>.valur=<array elemtype=string>;
+<new int>=<Field pointer>.valur;
+
+# ****valueAsString****
+
+!end lines
+
+<field_type>="text"
+<field_type>="button"
+<field_type>="combobox"
+<field_type>="listbox"
+<field_type>="checkbox"
+<field_type>="radiobutton"
+<field_type>="signature"
+
+<string_Field_alignment>="left"
+<string_Field_alignment>="center"
+<string_Field_alignment>="right"
+
+<int_Field_borderStyle>=border.s
+<int_Field_borderStyle>=border.b
+<int_Field_borderStyle>=border.d
+<int_Field_borderStyle>=border.i
+<int_Field_borderStyle>=border.u
+
+<int_Field_buttonPosition>=position.textOnly
+<int_Field_buttonPosition>=position.iconOnly
+<int_Field_buttonPosition>=position.iconTextV
+<int_Field_buttonPosition>=position.textIconV
+<int_Field_buttonPosition>=position.iconTextH
+<int_Field_buttonPosition>=position.textIconH
+<int_Field_buttonPosition>=position.overlay
+
+<int_Field_buttonScaleHow>=scaleHow.proportional
+<int_Field_buttonScaleHow>=scaleHow.anamorphic
+
+<int_Field_buttonScaleWhen>=scaleWhen.always
+<int_Field_buttonScaleWhen>=scaleWhen.never
+<int_Field_buttonScaleWhen>=scaleWhen.tooBig
+<int_Field_buttonScaleWhen>=scaleWhen.tooSmall
+
+<int_Field_display>=display.visible
+<int_Field_display>=display.hidden
+<int_Field_display>=display.noPrint
+<int_Field_display>=display.noView
+
+<int_Field_highlight>=highlight.n
+<int_Field_highlight>=highlight.i
+<int_Field_highlight>=highlight.p
+<int_Field_highlight>=highlight.o
+
+<int_Field_lineWidth>=0
+<int_Field_lineWidth>=1
+<int_Field_lineWidth>=2
+<int_Field_lineWidth>=3
+<int_Field_lineWidth>=4
+
+<int_Field_rotation>=0
+<int_Field_rotation>=90
+<int_Field_rotation>=180
+<int_Field_rotation>=270
+
+<int_Field_style>=style.ch
+<int_Field_style>=style.cr
+<int_Field_style>=style.di
+<int_Field_style>=style.ci
+<int_Field_style>=style.st
+<int_Field_style>=style.sq
+
+<int_Field_textFont>=font.Times
+<int_Field_textFont>=font.TimesB
+<int_Field_textFont>=font.TimesI
+<int_Field_textFont>=font.TimesBI
+<int_Field_textFont>=font.Helv
+<int_Field_textFont>=font.HelvB
+<int_Field_textFont>=font.HelvI
+<int_Field_textFont>=font.HelvBI
+<int_Field_textFont>=font.Cour
+<int_Field_textFont>=font.CourB
+<int_Field_textFont>=font.CourI
+<int_Field_textFont>=font.CourBI
+<int_Field_textFont>=font.Symbol
+<int_Field_textFont>=font.ZapfD
+

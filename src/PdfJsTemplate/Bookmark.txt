@@ -1,0 +1,29 @@
+!begin lines
+#rawnotes "Bookmark\nR-children array-type=Bookmark\nR-color array=Color\nR-doc Doc\nR-name JString\nR-open boolean\nR-parent Bookmark\nR-style int\n"
+<new array elemtype=Bookmark>=<Bookmark>.children;
+
+<new array elemtype=Color>=<Bookmark>.color;
+
+<new Doc>=<Bookmark>.doc;
+
+<new JString>=<Bookmark>.name;
+
+<new boolean>=<Bookmark>.open;
+
+<new Bookmark>=<Bookmark>.parent;
+
+<new int>=<Bookmark>.style;
+
+
+#rawnotes "Bookmark\ncreateChild - JString lines-count=10 int-0-10\nexecute\ninsertChild - Bookmark int-0-10\nremove\nsetAction - lines-count=10\n"
+<Bookmark>.createChild(<normal_name>,"this.closeDoc();",<int min=0 max=10>);
+
+<Bookmark>.execute();
+
+<Bookmark>.insertChild(<Bookmark>,<int min=0 max=10>);
+
+<Bookmark>.remove();
+
+<Bookmark>.setAction("this.closeDoc();");
+
+!end lines

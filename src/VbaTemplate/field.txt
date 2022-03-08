@@ -1,0 +1,53 @@
+<field>=fields(1)
+
+!begin lines
+#****************field methods start***********
+<field>.Copy
+<field>.Cut
+if <int min=0 max=8><lt>1 then <field>.Delete <cr><lf>
+<field>.DoClick
+<field>.Select
+<field>.Unlink
+<field>.Update
+<field>.UpdateSource
+#****************field properties start***********
+<new Application useset>=<field>.Application
+#set <field>.Application=<Application>
+<new Range useset>=<field>.Code
+#set <field>.Code=<Range>
+<new Long>=<field>.Creator
+#<field>.Creator=<Long>
+<new String>=<field>.Data
+<field>.Data=<String>
+<new Long>=<field>.Index
+#<field>.Index=<Long>
+<new InlineShape useset>=<field>.InlineShape
+set <field>.InlineShape=<InlineShape>
+<new object>=<field>.Kind
+#<field>.Kind=<WdFieldKind>
+<new LinkFormat useset>=<field>.LinkFormat
+set <field>.LinkFormat=<LinkFormat>
+<new boolean>=<field>.Locked
+<field>.Locked=<boolean>
+<new field useset>=<field>.Next
+#set <field>.Next=<field>
+<new OLEFormat useset>=<field>.OLEFormat
+set <field>.OLEFormat=<OLEFormat>
+<new Parent useset>=<field>.Parent
+set <field>.Parent=<Parent>
+<new field useset>=<field>.Previous
+#set <field>.Previous=<field>
+<new Range useset>=<field>.Result
+#set <field>.Result=<Range>
+<new boolean>=<field>.ShowCodes
+<field>.ShowCodes=<boolean>
+<new object>=<field>.Type
+#<field>.Type=<WdFieldType>
+!end lines
+
+!begin block test_field nousearg
+For i = 1 To fields.count<noguard>
+:fuzzall field fields(i)
+Next i<noguard>
+<noguard>
+!end block

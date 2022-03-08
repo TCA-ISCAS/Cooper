@@ -1,0 +1,53 @@
+!begin lines
+
+<new panes useset>=ActiveWindow.panes
+<new pane useset>=<panes id=1>((<int min=0 max=10000> Mod <panes id=1>.Count)+1)
+
+#****************pane methods start***********
+<pane>.Activate  
+<pane>.AutoScroll <Long arg argname=Velocity> 
+<pane>.Close  
+<pane>.LargeScroll <Integer optional arg argname=Down><Integer optional arg argname=Up><Integer optional arg argname=ToRight><Integer optional arg argname=ToLeft> 
+<pane>.NewFrameset  
+<pane>.PageScroll <Integer optional arg argname=Down><Integer optional arg argname=Up> 
+<pane>.SmallScroll <Integer optional arg argname=Down><Integer optional arg argname=Up><Integer optional arg argname=ToRight><Integer optional arg argname=ToLeft> 
+<pane>.TOCInFrameset  
+#****************pane properties start***********
+<new Application useset>=<pane>.Application
+set <pane>.Application=<Application>
+<new Long>=<pane>.BrowseWidth
+<pane>.BrowseWidth=<Long>
+<new Long>=<pane>.Creator
+<pane>.Creator=<Long>
+<new Boolean>=<pane>.DisplayRulers
+<pane>.DisplayRulers=<Boolean>
+<new Boolean>=<pane>.DisplayVerticalRuler
+<pane>.DisplayVerticalRuler=<Boolean>
+<new Document useset>=<pane>.Document
+set <pane>.Document=<Document>
+<new Frameset useset>=<pane>.Frameset
+set <pane>.Frameset=<Frameset>
+<new Long>=<pane>.HorizontalPercentScrolled
+<pane>.HorizontalPercentScrolled=<Long>
+<new object>=<pane>.Index
+<pane>.Index=<object>
+<new Long>=<pane>.MinimumFontSize
+<pane>.MinimumFontSize=<Long>
+<new pane useset>=<pane>.Next
+set <pane>.Next=<pane>
+<new pages useset>=<pane>.Pages
+set <pane>.Pages=<pages>
+<new object>=<pane>.Parent
+<pane>.Parent=<object>
+<new pane useset>=<pane>.Previous
+set <pane>.Previous=<pane>
+<new object>=<pane>.Selection
+<pane>.Selection=<object>
+<new Long>=<pane>.VerticalPercentScrolled
+<pane>.VerticalPercentScrolled=<Long>
+<new View useset>=<pane>.View
+set <pane>.View=<View>
+<new Zooms useset>=<pane>.Zooms
+set <pane>.Zooms=<Zooms>
+
+!end lines

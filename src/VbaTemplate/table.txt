@@ -1,0 +1,100 @@
+<Row>="todo"
+
+
+<table>=tables(1)
+
+<AutoFormat_arg_format>=<WdTableFormat>
+<AutoFormat_arg_format>=<WdTableFormatApply>
+#<AutoFormat_arg_format>=<TableStyle>
+<Split_arg_beforerow>=<small_int>
+<Split_arg_beforerow>=<Row>
+
+!begin lines
+#****************table methods start***********
+<table>.ApplyStyleDirectFormatting <String arg argname=StyleName>
+<table>.AutoFitBehavior(<WdAutoFitBehavior arg argname=Behavior>)
+<table>.AutoFormat <AutoFormat_arg_format optional arg argname=Format><boolean optional arg argname=ApplyBorders><boolean optional arg argname=ApplyShading><boolean optional arg argname=ApplyFont><boolean optional arg argname=ApplyColor><boolean optional arg argname=ApplyHeadingRows><boolean optional arg argname=ApplyLastRow><boolean optional arg argname=ApplyFirstColumn><boolean optional arg argname=ApplyLastColumn><boolean optional arg argname=AutoFit>
+<new Cell useset>=<table>.Cell(<Long arg argname=Row><Long arg argname=Column>)
+<new object>=<table>.ConvertToText(<WdTableFieldSeparator optional arg argname=Separator><boolean optional arg argname=NestedTables>)
+if <int min=0 max=8><lt>1 then <table>.Delete <cr><lf>
+<table>.Select
+<table>.Sort <boolean optional arg argname=ExcludeHeader><small_int optional arg argname=FieldNumber><WdSortFieldType optional arg argname=SortFieldType><WdSortOrder optional arg argname=SortOrder><small_int optional arg argname=FieldNumber2><WdSortFieldType optional arg argname=SortFieldType2><WdSortOrder optional arg argname=SortOrder2><small_int optional arg argname=FieldNumber3><WdSortFieldType optional arg argname=SortFieldType3><WdSortOrder optional arg argname=SortOrder3><boolean optional arg argname=CaseSensitive><boolean optional arg argname=BidiSort><boolean optional arg argname=IgnoreThe><boolean optional arg argname=IgnoreKashida><boolean optional arg argname=IgnoreDiacritics><boolean optional arg argname=IgnoreHe><WdLanguageID optional arg argname=LanguageID>
+<table>.SortAscending
+<table>.SortDescending
+<new Table useset>=<table>.Split(<Split_arg_beforerow arg argname=BeforeRow>)
+<table>.UpdateAutoFormat
+#****************table properties start***********
+<new object>=<table>.AllowAutoFit
+<table>.AllowAutoFit=<object>
+<new Application useset>=<table>.Application
+#set <table>.Application=<Application>
+<new boolean>=<table>.ApplyStyleColumnBands
+<table>.ApplyStyleColumnBands=<boolean>
+<new boolean>=<table>.ApplyStyleFirstColumn
+<table>.ApplyStyleFirstColumn=<boolean>
+<new boolean>=<table>.ApplyStyleHeadingRows
+<table>.ApplyStyleHeadingRows=<boolean>
+<new boolean>=<table>.ApplyStyleLastColumn
+<table>.ApplyStyleLastColumn=<boolean>
+<new boolean>=<table>.ApplyStyleLastRow
+<table>.ApplyStyleLastRow=<boolean>
+<new boolean>=<table>.ApplyStyleRowBands
+<table>.ApplyStyleRowBands=<boolean>
+<new object>=<table>.AutoFormatType
+#<table>.AutoFormatType=<WdTableFormat>
+<new Borders useset>=<table>.Borders
+<table>.Borders=<Borders>
+<new Single>=<table>.BottomPadding
+<table>.BottomPadding=<Single>
+<new Columns useset>=<table>.Columns
+#set <table>.Columns=<Columns>
+<new Long>=<table>.Creator
+#<table>.Creator=<Long>
+<new String>=<table>.Descr
+<table>.Descr=<String>
+<new String>=<table>.ID
+<table>.ID=<String>
+<new Single>=<table>.LeftPadding
+<table>.LeftPadding=<Single>
+<new Long>=<table>.NestingLevel
+#<table>.NestingLevel=<Long>
+<new object>=<table>.Parent
+<table>.Parent=<object>
+<new Single>=<table>.PreferredWidth
+<table>.PreferredWidth=<Single>
+<new object>=<table>.PreferredWidthType
+<table>.PreferredWidthType=<WdPreferredWidthType>
+<new Range useset>=<table>.Range
+#set <table>.Range=<Range>
+<new Single>=<table>.RightPadding
+<table>.RightPadding=<Single>
+<new Rows useset>=<table>.Rows
+#set <table>.Rows=<Rows>
+<new Shading useset>=<table>.Shading
+set <table>.Shading=<Shading>
+<new Single>=<table>.Spacing
+<table>.Spacing=<Single>
+<new table_style useset>=<table>.Style
+set <table>.Style=<table_style>
+<new object>=<table>.TableDirection
+<table>.TableDirection=<WdTableDirection>
+<new Tables useset>=<table>.Tables
+#set <table>.Tables=<Tables>
+<new String>=<table>.Title
+<table>.Title=<String>
+<new Single>=<table>.TopPadding
+<table>.TopPadding=<Single>
+<new boolean>=<table>.Uniform
+#<table>.Uniform=<boolean>
+
+!end lines
+
+<table_style>=<WdBuiltinStyle>
+#<table_style>=<TableStyle>
+
+!begin block test_table nousearg
+For i = 1 To tables.count<noguard>
+:fuzzall table tables(i)
+Next i<noguard>
+<noguard>
+!end block

@@ -1,0 +1,133 @@
+<paragraph>=paragraphs((<int min=0 max=10000> Mod paragraphs.Count)+1)
+!begin lines
+#****************paragraph methods start***********
+<paragraph>.CloseUp
+<paragraph>.Indent
+<paragraph>.IndentCharWidth <Integer arg argname=Count>
+<paragraph>.IndentFirstLineCharWidth <Integer arg argname=Count>
+<paragraph>.JoinList
+<paragraph>.ListAdvanceTo <Integer optional arg argname=Level1><Integer optional arg argname=Level2><Integer optional arg argname=Level3><Integer optional arg argname=Level4><Integer optional arg argname=Level5><Integer optional arg argname=Level6><Integer optional arg argname=Level7><Integer optional arg argname=Level8><Integer optional arg argname=Level9>
+<new Paragraph useset>=<paragraph>.Next(<small_int optional arg argname=Count>)
+<paragraph>.OpenOrCloseUp
+<paragraph>.OpenUp
+<paragraph>.Outdent
+<paragraph>.OutlineDemote
+<paragraph>.OutlineDemoteToBody
+<paragraph>.OutlinePromote
+<new Paragraph useset>=<paragraph>.Previous(<small_int optional arg argname=Count>)
+<paragraph>.Reset
+<paragraph>.ResetAdvanceTo
+<paragraph>.SelectNumber
+<paragraph>.SeparateList
+<paragraph>.Space1
+<paragraph>.Space15
+<paragraph>.Space2
+<paragraph>.TabHangingIndent <Integer arg argname=Count>
+<paragraph>.TabIndent <Integer arg argname=Count>
+#****************paragraph properties start***********
+<new Long>=<paragraph>.AddSpaceBetweenFarEastAndAlpha
+<paragraph>.AddSpaceBetweenFarEastAndAlpha=<Long>
+<new Long>=<paragraph>.AddSpaceBetweenFarEastAndDigit
+<paragraph>.AddSpaceBetweenFarEastAndDigit=<Long>
+<new object>=<paragraph>.Alignment
+<paragraph>.Alignment=<WdParagraphAlignment>
+<new Application useset>=<paragraph>.Application
+#set <paragraph>.Application=<Application>
+<new Long>=<paragraph>.AutoAdjustRightIndent
+<paragraph>.AutoAdjustRightIndent=<Long>
+<new object>=<paragraph>.BaseLineAlignment
+<paragraph>.BaseLineAlignment=<WdBaselineAlignment>
+<new Borders useset>=<paragraph>.Borders
+<paragraph>.Borders=<Borders>
+<new Single>=<paragraph>.CharacterUnitFirstLineIndent
+<paragraph>.CharacterUnitFirstLineIndent=<Single>
+<new Single>=<paragraph>.CharacterUnitLeftIndent
+<paragraph>.CharacterUnitLeftIndent=<Single>
+<new Single>=<paragraph>.CharacterUnitRightIndent
+<paragraph>.CharacterUnitRightIndent=<Single>
+<new Boolean>=<paragraph>.CollapsedState
+<paragraph>.CollapsedState=<Boolean>
+<new Boolean>=<paragraph>.CollapseHeadingByDefault
+<paragraph>.CollapseHeadingByDefault=<Boolean>
+<new Long>=<paragraph>.Creator
+#<paragraph>.Creator=<Long>
+<new Long>=<paragraph>.DisableLineHeightGrid
+<paragraph>.DisableLineHeightGrid=<Long>
+<new DropCap useset>=<paragraph>.DropCap
+set <paragraph>.DropCap=<DropCap>
+<new Long>=<paragraph>.FarEastLineBreakControl
+<paragraph>.FarEastLineBreakControl=<Long>
+<new Single>=<paragraph>.FirstLineIndent
+<paragraph>.FirstLineIndent=<Single>
+<new ParagraphFormat useset>=<paragraph>.Format
+set <paragraph>.Format=<ParagraphFormat>
+<new Long>=<paragraph>.HalfWidthPunctuationOnTopOfLine
+<paragraph>.HalfWidthPunctuationOnTopOfLine=<Long>
+<new Long>=<paragraph>.HangingPunctuation
+<paragraph>.HangingPunctuation=<Long>
+<new Long>=<paragraph>.Hyphenation
+<paragraph>.Hyphenation=<Long>
+<new String>=<paragraph>.ID
+<paragraph>.ID=<String>
+<new Boolean>=<paragraph>.IsStyleSeparator
+#<paragraph>.IsStyleSeparator=<Boolean>
+<new Long>=<paragraph>.KeepTogether
+<paragraph>.KeepTogether=<Long>
+<new Long>=<paragraph>.KeepWithNext
+<paragraph>.KeepWithNext=<Long>
+<new Single>=<paragraph>.LeftIndent
+<paragraph>.LeftIndent=<Single>
+<new Single>=<paragraph>.LineSpacing
+<paragraph>.LineSpacing=<Single>
+<new object>=<paragraph>.LineSpacingRule
+<paragraph>.LineSpacingRule=<WdLineSpacing>
+<new Single>=<paragraph>.LineUnitAfter
+<paragraph>.LineUnitAfter=<Single>
+<new Single>=<paragraph>.LineUnitBefore
+<paragraph>.LineUnitBefore=<Single>
+<new Integer>=<paragraph>.ListNumberOriginal(<small_int arg argname=Level>)
+#<paragraph>.ListNumberOriginal=<Integer>
+<new Long>=<paragraph>.MirrorIndents
+<paragraph>.MirrorIndents=<Long>
+<new Long>=<paragraph>.NoLineNumber
+<paragraph>.NoLineNumber=<Long>
+<new object>=<paragraph>.OutlineLevel
+<paragraph>.OutlineLevel=<WdOutlineLevel>
+<new Long>=<paragraph>.PageBreakBefore
+<paragraph>.PageBreakBefore=<Long>
+<new Parent useset>=<paragraph>.Parent
+set <paragraph>.Parent=<Parent>
+<new Range useset>=<paragraph>.Range
+#set <paragraph>.Range=<Range>
+<new object>=<paragraph>.ReadingOrder
+<paragraph>.ReadingOrder=<WdReadingOrder>
+<new Single>=<paragraph>.RightIndent
+<paragraph>.RightIndent=<Single>
+<new Shading useset>=<paragraph>.Shading
+set <paragraph>.Shading=<Shading>
+<new Single>=<paragraph>.SpaceAfter
+<paragraph>.SpaceAfter=<Single>
+<new Long>=<paragraph>.SpaceAfterAuto
+<paragraph>.SpaceAfterAuto=<Long>
+<new Single>=<paragraph>.SpaceBefore
+<paragraph>.SpaceBefore=<Single>
+<new Long>=<paragraph>.SpaceBeforeAuto
+<paragraph>.SpaceBeforeAuto=<Long>
+<new Variant useset>=<paragraph>.Style
+set <paragraph>.Style=<Variant>
+<new TabStops useset>=<paragraph>.TabStops
+<paragraph>.TabStops=<TabStops>
+<new object>=<paragraph>.TextboxTightWrap
+<paragraph>.TextboxTightWrap=<WdTextboxTightWrap>
+<new Long>=<paragraph>.WidowControl
+<paragraph>.WidowControl=<Long>
+<new Long>=<paragraph>.WordWrap
+<paragraph>.WordWrap=<Long>
+!end lines
+
+!begin block test_paragraph nousearg
+For i = 1 To paragraphs.count<noguard>
+:fuzzall paragraph paragraphs(i)
+Next i<noguard>
+<noguard>
+!end block

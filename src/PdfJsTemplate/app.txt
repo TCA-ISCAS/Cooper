@@ -1,0 +1,54 @@
+!begin lines
+
+app.calculate=<boolean>;
+var hahaha=app.calculate;
+
+app.focusRect=<boolean>;
+var hahaha=app.focusRect;
+
+var hahaha=app.formsVersion;
+
+var hahaha=app.fromPDFConverters;
+
+<new FullScreen>=app.fs;
+
+var hahaha=app.fullscreen;
+app.fullscreen=<boolean>;
+
+var hahaha=app.media;
+
+var hahaha=app.monitors;
+
+var hahaha=app.numPlugIns;
+
+var hahaha=app.openInPlace;
+app.openInPlace=<boolean>;
+
+var hahaha=app.platform;
+var hahaha=app.plugIns;
+
+var hahaha=app.printColorProfiles;
+
+var hahaha=app.runtimeHighlight;
+app.runtimeHighlight=<boolean>;
+
+var hahaha=app.runtimeHighlightColor;
+app.runtimeHighlightColor=<array elemtype=Color>
+
+var hahaha=app.thermometer;
+
+var hahaha=app.toolbar;
+app.toolbar=<boolean>;
+
+var hahaha=app.toolbarHorizontal;
+app.toolbarHorizontal=<boolean>;
+
+var hahaha=app.toolbarVertical;
+app.toolbarVertical=<boolean>;
+
+var hahaha = app.viewerType;
+var hahaha=app.viewerVariation;
+var hahaha=app.viewerVersion;
+app.goBack();
+app.goForward();
+!end lines

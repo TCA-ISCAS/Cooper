@@ -1,0 +1,31 @@
+!begin lines
+
+<AnnotRichMedia>.activated=<boolean>;
+<AnnotRichMedia>.activated=true;
+<AnnotRichMedia>.activated=true;
+<new boolean>=<AnnotRichMedia>.activated;
+
+<new TempVar>=<AnnotRichMedia>.context3D;
+
+<new JString>=<AnnotRichMedia>.name;
+
+<new int>=<AnnotRichMedia>.page;
+
+<AnnotRichMedia>.rect=<array elemtype=int len=4>;
+
+<new JString>=<AnnotRichMedia>.subtype;
+
+<AnnotRichMedia>.callAS(<AnnotRichMedia_callAs_arg1>);
+
+!end lines
+
+<AnnotRichMedia_callAs_arg1>="multimedia_play"
+<AnnotRichMedia_callAs_arg1>="multimedia_play"
+<AnnotRichMedia_callAs_arg1>="multimedia_pause"
+<AnnotRichMedia_callAs_arg1>="multimedia_rewind"
+<AnnotRichMedia_callAs_arg1>="multimedia_rewind"
+<AnnotRichMedia_callAs_arg1>="multimedia_nextCuePoint"
+<AnnotRichMedia_callAs_arg1>="multimedia_prevCuePoint"
+<AnnotRichMedia_callAs_arg1>="multimedia_seek",<int min=0 max=1000>
+<AnnotRichMedia_callAs_arg1>="multimedia_mute"
+<AnnotRichMedia_callAs_arg1>="multimedia_volume",<float min=0 max=2>

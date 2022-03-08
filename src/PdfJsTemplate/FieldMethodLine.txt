@@ -1,0 +1,49 @@
+!begin lines
+#rawnotes:#	"Field\nbrowseForFileToSubmit -\nbuttonGetCaption - #nFace-face_int\n/face_int 0 1 2\nbuttonGetIcon - #nFace-face_int\nbuttonSetCaption - string #nFace-face_int\ncheckThisBox - widget_idx #bCheckIt-boolean\nclearItems -\ndefaultIsChecked - widget_idx #bIsDefaultChecked-boolean\ndeleteItemAt - #nIdx-idx\ngetArray Field_array\ngetItemAt field_name item_idx #bExportValue-boolean\ngetLock Lock\ninsertItemAt - call-new_field_name #cExport-string #nIdx-idx\nisDefaultChecked boolean widget_idx\nsetFocus -\nsetItems - array-int\nsetItems - array-string\nsignatureGetModifications -\nsignatureInfo -\nsignatureValidate - #bUI-boolean\n\n\n\n\n"
+
+<Field pointer>.browseForFileToSubmit();
+
+<Field pointer>.buttonGetCaption(<face_int beforeoutput=handle_dict_arg first_arg last_arg optional argname=nFace>);
+
+<new Icon>=<Field pointer>.buttonGetIcon(<face_int beforeoutput=handle_dict_arg first_arg last_arg optional argname=nFace>);
+
+<Field pointer>.buttonSetCaption(<string beforeoutput=handle_arg first_arg><face_int beforeoutput=handle_arg last_arg optional argname=nFace>);
+
+<Field pointer>.buttonSetIcon(<Icon beforeoutput=handle_arg first_arg><face_int beforeoutput=handle_arg last_arg optional argname=nFace>);
+
+<Field pointer>.checkThisBox(<idx beforeoutput=handle_arg first_arg><boolean beforeoutput=handle_arg last_arg optional argname=bCheckIt>);
+
+<Field pointer>.clearItems();
+
+<Field pointer>.defaultIsChecked(<idx beforeoutput=handle_arg first_arg><boolean beforeoutput=handle_arg last_arg optional argname=bIsDefaultChecked>);
+
+<Field pointer>.deleteItemAt(<idx beforeoutput=handle_dict_arg first_arg last_arg optional argname=nIdx>);
+
+<new Field_array id=1>=<Field pointer>.getArray();if(<Field_array id=1>){savevararr('field',<Field_array id=1>,<int>);}
+
+<new field_name>=<Field pointer>.getItemAt(<idx beforeoutput=handle_arg first_arg><boolean beforeoutput=handle_arg last_arg optional argname=bExportValue>);
+
+<new Lock>=<Field pointer>.getLock();
+
+<Field pointer>.insertItemAt(<string beforeoutput=handle_arg first_arg><string beforeoutput=handle_arg optional argname=cExport><idx beforeoutput=handle_arg last_arg optional argname=nIdx>);
+
+<new boolean>=<Field pointer>.isBoxChecked(<idx beforeoutput=handle_arg first_arg last_arg>);
+
+<new boolean>=<Field pointer>.isDefaultChecked(<idx beforeoutput=handle_arg first_arg last_arg>);
+
+<Field pointer>.setFocus();
+
+<Field pointer>.setItems(<array elemtype=int beforeoutput=handle_arg first_arg last_arg>);
+
+<Field pointer>.setItems(<array elemtype=string beforeoutput=handle_arg first_arg last_arg>);
+
+<Field pointer>.signatureGetModifications();
+
+<Field pointer>.signatureInfo();
+
+<Field pointer>.signatureValidate(<boolean beforeoutput=handle_dict_arg first_arg last_arg optional argname=bUI>);
+
+!end lines
+<face_int>=0
+<face_int>=1
+<face_int>=2

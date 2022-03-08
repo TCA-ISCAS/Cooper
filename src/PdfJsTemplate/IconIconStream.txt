@@ -1,0 +1,13 @@
+!begin lines
+<new icon_name>=<Icon>.name;
+
+<new string>=<IconStream>.read(<int min=-40 max=2000>);
+<new xxx>=<IconStream>.read(<int>);
+<new xxx>=<IconStream>.read(<int_idx>);
+<new xxx>=<IconStream>.width;
+<new xxx>=<IconStream>.height;
+
+<new IconStream>=util.iconStreamFromIcon(<Icon>);
+<new IconStream>=util.iconStreamFromIcon(<Icon>);
+
+!end lines

@@ -1,0 +1,10 @@
+#!include VbaTemplate/table.txt
+!include VbaTemplate/enum.txt
+!include VbaTemplate/common.txt
+#!include VbaTemplate/field.txt
+!include VbaTemplate/paragraph.txt
+!include VbaTemplate/range.txt
+!include VbaTemplate/pane.txt
+!include VbaTemplate/page.txt
+#!lineguard <line> : If Err.number <> 0 Then msgbox err.description : Err.clear
+!lineguard <line> : If Err.number <> 0 Then Err.clear

@@ -1,0 +1,140 @@
+!begin helperlines
+<new Annotation_array>=this.getAnnots();
+<new Annotation>=<Annotation_array id=1>[<int min=0 max=1000>%(<Annotation_array id=1>.length)];
+<new Field>=this.getField(this.getNthFieldName(<int min=0 max=1000>%this.numFields));
+!end helperlines
+
+!begin block add_annots argument0
+<new Annotation>=this.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+<new Annotation>=this.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+<new Annotation>=this.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+<new Annotation>=this.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+<new Annotation>=this.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+<new Annotation>=this.addAnnot(<annot_literal_0 beforeoutput=handle_arg first_arg last_arg>);
+!end block
+
+!begin block add_fields argument0
+<new Field>=this.addField(<normal_name beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><constant_oCoords beforeoutput=handle_arg last_arg>);
+<new Field>=this.addField(<normal_name beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><constant_oCoords beforeoutput=handle_arg last_arg>);
+<new Field>=this.addField(<normal_name beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><constant_oCoords beforeoutput=handle_arg last_arg>);
+<new Field>=this.addField(<normal_name beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><constant_oCoords beforeoutput=handle_arg last_arg>);
+<new Field>=this.addField(<normal_name beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><constant_oCoords beforeoutput=handle_arg last_arg>);
+<new Field>=this.addField(<normal_name beforeoutput=handle_arg first_arg><field_type beforeoutput=handle_arg><page_idx beforeoutput=handle_arg><constant_oCoords beforeoutput=handle_arg last_arg>);
+!end block
+
+!begin block annot_handle array_name
+if(<array_name>.length<lt>4){<noguard>
+    :expand add_annots nousearg
+}<noguard>
+<array_name>=this.getAnnots();
+for(var i = 0;i<lt><array_name>.length;i++){<noguard>
+console.clear();
+console.println("annots num:"+i+" "+<array_name>.length);
+:fuzzall Annotation <array_name>[i]
+}<noguard>
+console.clear();
+console.println("fuzzall ended!");
+!end block
+
+
+!begin block block_Annotation
+if(<Annotation_array id=1>&&<Annotation_array id=1>.length>0){<noguard>
+    :expand annot_handle <Annotation_array id=1>
+}<noguard>
+!end block
+
+
+!begin block block_Field
+try{<noguard>
+if(this.numFields<lt>4){<noguard>
+    :expand add_fields nousearg
+}<noguard>
+if(this.numFields>0){<noguard>
+for(var i=0;i<lt>this.numFields;i++){<noguard>
+console.clear();
+console.println("fields num:"+i+" "+this.numFields);
+<new field_name id=1>=this.getNthFieldName(i);
+<new field_obj id=2>=this.getField(<field_name id=1>);
+if(<field_obj id=2>){<noguard>
+:fuzzall Field <field_obj id=2>
+}<noguard>
+}<noguard>
+}<noguard>
+}catch(e){console.println(e)}<noguard>
+!end block
+
+!begin block test_icon nouseargrment
+<new icon_array id=1>=this.icons;
+if(<icon_array id=1>){<noguard>
+for(var i=0;i<lt><icon_array id=1>.length;i++){<noguard>
+console.clear();
+console.println("icons num:"+i+" "+<icon_array id=1>.length);
+:fuzzall Icon <icon_array id=1>[i]
+<new IconStream id=2>=util.iconStreamFromIcon(<icon_array id=1>);
+if(<IconStream id=2>){<noguard>
+:fuzzall IconStream <IconStream id=2>
+}<noguard>
+}<noguard>
+}<noguard>
+!end block
+
+!begin block test_alternate_presentation nouseargument
+<new aparrays id=1>=this.alternatePresentations;
+if(<aparrays id=1>){<noguard>
+for(var ap in <aparrays id=1>){<noguard>
+:fuzzall AlternatePresentation ap
+}<noguard>
+}<noguard>
+!end block
+
+!begin block test_annotrichmedia
+try{<noguard>
+for(var pidx=0;pidx<this.numPages;pidx++){<noguard>
+var riches = this.getAnnotsRichMedia(pidx);
+if(riches){<noguard>
+for(var ridx=0;ridx<riches.length;ridx++){<noguard>
+:fuzzall AnnotRichMedia riches[ridx]
+}<noguard>
+}<noguard>
+}<noguard>
+}catch(e){console.println(e)}<noguard>
+!end block
+
+
+!begin block test_annot3d
+try{<noguard>
+for(var pidx=0;pidx<this.numPages;pidx++){<noguard>
+var riches = this.getAnnots3D(pidx);
+if(riches){<noguard>
+for(var ridx=0;ridx<riches.length;ridx++){<noguard>
+:fuzzall Annot3D riches[ridx]
+}<noguard>
+}<noguard>
+}<noguard>
+}catch(e){console.println(e)}<noguard>
+!end block
+
+!begin block test_doc nouseargument
+:fuzzall Doc this
+!end block
+
+!begin block test_bookmark nouseargument
+if(this.bookmarkRoot){<noguard>
+var bmqueue=[this.bookmarkRoot];
+for(var i=0;i<bmqueue.length;i++){<noguard>
+var bm=bmqueue[i];
+if(bm.children){<noguard>
+for(var j=0;j<bm.children.length;j++){<noguard>
+bmqueue.push(bm.children[j]);
+}<noguard>
+bmqueue.push(bm);
+}<noguard>
+}<noguard>
+var ridx=1;
+for(var bidx=0;bidx<bmqueue.length;bidx++){<noguard>
+if((<int>+bidx)%6<lt>2)continue;
+ridx=(bidx+<int min=0 max=10000>)%bmqueue.length;
+:fuzzall Bookmark bmqueue[ridx]
+}<noguard>
+}<noguard>
+!end block

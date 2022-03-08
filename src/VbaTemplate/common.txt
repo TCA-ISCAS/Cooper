@@ -1,0 +1,16 @@
+
+<Variant>=<small_int>
+<Variant>=<boolean>
+<Variant>=<String>
+<boolean>=True
+<boolean>=False
+<Long>=<boolean>
+<Long>=<int>
+<Boolean>=<boolean>
+<Integer>=<int>
+<small_int>=1
+<small_int>=1
+<small_int>=2
+<small_int>=3
+<small_int>=4
+<small_int>=5

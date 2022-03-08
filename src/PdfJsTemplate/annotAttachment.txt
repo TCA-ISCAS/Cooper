@@ -1,0 +1,9 @@
+!begin lines
+var hahaha=<Annotation>.contentStream;
+var hahaha=<Annotation>.creationDate;
+var hahaha=<Annotation>.MIMEtype;
+var hahaha=<Annotation>.modDate;
+var hahaha=<Annotation>.name;
+var hahaha=<Annotation>.pathname;
+var hahaha=<Annotation>.size;
+!end lines

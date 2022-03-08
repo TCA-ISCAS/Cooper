@@ -1,0 +1,151 @@
+!begin lines
+<Doc pointer>.pageNum=<page_idx>;
+<Doc pointer>.pageNum=<page_idx>;
+<Doc pointer>.layout=<string_Doc_layout>;
+!end lines
+
+<Doc>=this
+<string_Doc_layout>="SinglePage"
+<string_Doc_layout>="OneColumn"
+<string_Doc_layout>="TwoColumnLeft"
+<string_Doc_layout>="TwoColumnRight"
+<string_Doc_layout>="TwoPageLeft"
+<string_Doc_layout>="TwoPageRight"
+
+
+#rawnotes:#    "Doc\nR-alternatePresentations alternatePresentation_array\nR-author string\nbaseURL string\nR-bookmarkRoot Bookmark\ncalculate boolean\ncollection Collection\nR-creationDate Date\nR-creator string\nR-dataObjects Data_array\nR-docID string\nr-documentFileName string\nr-dynamicXFAForm boolean\nr-external boolean\nr-filesize int\nr-hidden boolean\nhostContainer HostContainer\nr-icons Icon_array\nr-info Info\nr-innerAppWindowRect int\nr-innerDocWindowRect int\nr-isModal boolean\nr-keywords string\nlayout string SinglePage OneColumn TwoColumnLeft TwoColumnRight TwoPageLeft TwoPageRight\nmedia Doc_media\nR-modDate Date\nr-mouseX int\nr-mouseY int\nnoautocomplete boolean\nr--numFields int\nr--numPages int\nr--numTemplates int\nr-path string\nr-outerAppWindowRect temp\nr-outerDocWindowRect temp\n-pageNum page_idx\nr-pageWindowRect temp\nr-permStatusReady boolean\nr-producer string\nr-requiresFullSave boolean\nr-securityHandler string\nr-selectedAnnots temp\nr-sounds Sound_array\nr-spellDictionaryOrder temp\nsubject string\ntemplates Template_array\nr-title string\nr-URL string\nviewState Opaque\nr-xfa XFAObject\nr-XFAForeground boolean\nzoom int_zoom\nzoomType zoomtype zoomtype.none zoomtype.fitP zoomtype.fitW zoomtype.fitH zoomtype.fitV zoomtype.pref zoomtype.refW\n\n\n\n\n\n\n"
+
+!begin lines
+<new array elemtype=AlternatePresentation>=<Doc pointer>.alternatePresentations;
+
+<new JString>=<Doc pointer>.author;
+
+<Doc pointer>.baseURL=<string>;
+<new JString>=<Doc pointer>.baseURL;
+
+<new Bookmark>=<Doc pointer>.bookmarkRoot;
+
+if(<int id=1>%6<lt>2){<Doc id=2 pointer>.calculate=<boolean>;}else{<Doc id=2 pointer>.calculate=!(<Doc id=2 pointer>.calculate)}
+<new boolean>=<Doc pointer>.calculate;
+
+<Doc pointer>.collection=<Collection>;
+<new Collection>=<Doc pointer>.collection;
+
+<new Date>=<Doc pointer>.creationDate;
+
+<new JString>=<Doc pointer>.creator;
+
+#<new Data_array>=<Doc pointer>.dataObjects;
+
+<new JString>=<Doc pointer>.docID;
+
+<new JString>=<Doc pointer>.documentFileName;
+
+<new boolean>=<Doc pointer>.dynamicXFAForm;
+
+<new boolean>=<Doc pointer>.external;
+
+<new int>=<Doc pointer>.filesize;
+
+<new boolean>=<Doc pointer>.hidden;
+
+#<Doc pointer>.hostContainer=<HostContainer>;
+<new HostContainer>=<Doc pointer>.hostContainer;
+
+<new Icon_array>=<Doc pointer>.icons;
+
+<new int>=<Doc pointer>.info;
+
+<new int>=<Doc pointer>.innerAppWindowRect;
+
+<new int>=<Doc pointer>.innerDocWindowRect;
+
+<new boolean>=<Doc pointer>.isModal;
+
+<new JString>=<Doc pointer>.keywords;
+
+<Doc pointer>.layout=<string_Doc_layout>;
+<new JString>=<Doc pointer>.layout;
+
+#<Doc pointer>.media=<doc_media>;
+<new int>=<Doc pointer>.media;
+
+<new Date>=<Doc pointer>.modDate;
+
+<new int>=<Doc pointer>.mouseX;
+
+<new int>=<Doc pointer>.mouseY;
+
+if(<int id=1>%6<lt>2){<Doc id=2 pointer>.noautocomplete=<boolean>;}else{<Doc id=2 pointer>.noautocomplete=!(<Doc id=2 pointer>.noautocomplete)}
+<new boolean>=<Doc pointer>.noautocomplete;
+
+# ****-numFields int****
+<new int>=<Doc pointer>.numFields;
+
+# ****-numPages int****
+<new int>=<Doc pointer>.numPages;
+
+# ****-numTemplates int****
+<new int>=<Doc pointer>.numTemplates;
+
+<new JString>=<Doc pointer>.path;
+
+<new temp>=<Doc pointer>.outerAppWindowRect;
+
+<new temp>=<Doc pointer>.outerDocWindowRect;
+
+# ****-pageNum page_idx****
+<Doc pointer>.pageNum=<page_idx>;
+<new page_idx>=<Doc pointer>.pageNum;
+
+<new temp>=<Doc pointer>.pageWindowRect;
+
+<new boolean>=<Doc pointer>.permStatusReady;
+
+<new JString>=<Doc pointer>.producer;
+
+<new boolean>=<Doc pointer>.requiresFullSave;
+
+<new JString>=<Doc pointer>.securityHandler;
+
+<new temp>=<Doc pointer>.selectedAnnots;
+
+<new Sound_array>=<Doc pointer>.sounds;
+
+<new temp>=<Doc pointer>.spellDictionaryOrder;
+
+<Doc pointer>.subject=<string>;
+<new JString>=<Doc pointer>.subject;
+
+<Doc pointer>.templates=<Template_array>;
+<new Template_array>=<Doc pointer>.templates;
+
+<new JString>=<Doc pointer>.title;
+
+<new JString>=<Doc pointer>.URL;
+
+<Doc pointer>.viewState=<Opaque>;
+<new Opaque>=<Doc pointer>.viewState;
+
+<new XFAObject>=<Doc pointer>.xfa;
+
+<new boolean>=<Doc pointer>.XFAForeground;
+
+if(<int id=1>%6<lt>1){<Doc id=2 pointer>.zoom=<int min=0 max=110>;}else if(<int id=1>%6<lt>4){<Doc id=2 pointer>.zoom=<Doc id=2 pointer>.zoom+(<int_attr_add>)}else{<Doc id=2 pointer>.zoom=<Doc id=2 pointer>.zoom*(<int_attr_mul>)}
+<new int>=<Doc pointer>.zoom;
+
+<Doc pointer>.zoomType=<zoomtype_Doc_zoomType>;
+<new int>=<Doc pointer>.zoomType;
+
+!end lines
+
+
+
+<zoomtype_Doc_zoomType>=zoomtype.none
+<zoomtype_Doc_zoomType>=zoomtype.fitP
+<zoomtype_Doc_zoomType>=zoomtype.fitW
+<zoomtype_Doc_zoomType>=zoomtype.fitH
+<zoomtype_Doc_zoomType>=zoomtype.fitV
+<zoomtype_Doc_zoomType>=zoomtype.pref
+<zoomtype_Doc_zoomType>=zoomtype.refW
+

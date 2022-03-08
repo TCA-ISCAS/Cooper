@@ -1,0 +1,27 @@
+!begin function handle_arg
+    ret = ret_val
+    optional = True if 'optional' in attributes else False
+    first = True if 'first_arg' in attributes else False
+    last = True if 'last_arg' in attributes else False
+    argname = None if 'argname' not in attributes else attributes['argname']
+    if len(ret_val) > 0:
+        if argname is not None:
+            ret='{}={}'.format(argname, ret)
+        if first:
+            ret_val= ret
+        else:
+            ret_val = ','+ret
+!end function
+
+!begin function handle_dict_arg
+    assert 'optional' in attributes
+    argname = attributes['argname']
+    first = True if 'first_arg' in attributes else False
+    last = True if 'last_arg' in attributes else False
+    if len(ret_val)>0:
+        ret_val = '{}:{},'.format(argname, ret_val)
+    if first:
+        ret_val = '{'+ret_val
+    if last:
+        ret_val = ret_val + '}'
+!end function
