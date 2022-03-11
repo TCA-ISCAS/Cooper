@@ -80,7 +80,7 @@ Cooper: Testing the Binding Code of Scripting Languages with Cooperative Mutatio
   title        = {{Cooper: Testing the Binding Code of Scripting Languages with Cooperative Mutation (To Appear)}},
   author       = {Peng Xu and Yanhao Wang and Hong Hu and Purui Su},
   booktitle    = {Proceedings of the 29th Annual Network and Distributed System Security Symposium (NDSS 2022)},
-  month        = {feb # {--} # mar},
+  month        = {apr},
   year         = {2022},
   address      = {San Diego, CA},
 }
